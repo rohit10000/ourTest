@@ -1,0 +1,108 @@
+.sidePanel{
+    background-color: #BE81F7;
+}
+.sidePanel__user{
+    padding-top: 1vh;
+    margin-left: 1vw;
+}
+.sidePanel__buttonExplained{
+    display: flex;
+}
+.sidePanel__buttonExplained__box{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+}
+.sidePanel__buttonExplained__box >p{
+    font-size: small;
+    padding-left: 0.7rem;
+}
+.sidePanel__questionNavigation{
+    display: flex;
+    flex-direction: column;
+}
+.sidePanel__questionNavigation__title{
+    display: flex;
+    background-color: #B4DBED;
+    padding-left: 1vw;
+    padding-top: 2vh;
+}
+.sidePanel__questionNavigation__buttons{
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    padding: 5px;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: flex-start;
+}
+.sidePanel__questionNavigation__buttons > button{
+    margin-left: 4px;
+    margin-right: 4px;
+    height: 2rem !important;
+    width: 2rem !important;
+    border-color: #56E3B8 ;
+    border-width: medium;
+    border-style: solid;
+
+}
+.btnCommonAttr{
+    margin-right: 0.5rem;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: black;
+    margin-left: 1vw;
+}
+
+.sidePanel__activeInfo{
+    background-color: orange;
+    border-radius: 40%;
+}
+
+.sidePanel__answered{
+    background-color: green;
+}
+.sidePanel__notAnswered{
+    background-color: red;
+}
+.sidePanel__notVisited{
+    background-color: white;
+    outline: none;
+}
+.sidePanel__active{
+    background-color: orange;
+    border-radius: 40%;
+    outline: none;
+}
+
+@media screen and (max-width: 720px){
+    .sidePanel{
+        width: 100%;
+    }
+    .sidePanel__user{
+        display: flex;
+    }
+    .sidePanel__user > p{
+        flex: 1;
+    }
+    .sidePanel__buttonExplained__box{
+        padding-left: 3vw;
+    }
+    .sidePanel__buttonExplained__box >p{
+        font-size: x-small;
+        padding-left: 0.1rem;
+    }
+    .btnCommonAttr{
+        width: 1.2rem;
+        height: 1.2rem;
+        color: black;
+        margin-left: 1vw;
+        font-size: x-small;
+    }
+    /*.sidePanel__questionNavigation__buttons > button{*/
+    /*    height: 2rem !important;*/
+    /*    width: 2rem !important; ;*/
+
+    /*}*/
+}

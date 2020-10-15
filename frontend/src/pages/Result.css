@@ -1,0 +1,44 @@
+.result{
+
+}
+.result__header{
+    display: flex;
+    position: sticky;
+    top: 120px;
+    z-index: 80;
+    padding: 1.5rem;
+    border-bottom: 1px solid #56E3B8;
+    background-color: white;
+    align-items: center;
+}
+.result__header__title{
+    display: flex;
+    margin-left: 2vw;
+    font-size: large;
+    font-weight: 300;
+    font-style: italic;
+}
+.result__header__title > p > strong{
+    font-weight: bold;
+    font-size: 20px;
+}
+.result__header__score{
+    margin-left: 10vw;
+}
+.result__header__score > p{
+    font-style: italic;
+    font-size: 20px;
+}
+.result__header__score > p > strong{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.result__body{
+    padding: 2rem 5rem 5rem 5rem;
+}
+
+@media screen and (max-width: 720px){
+    .result__body{
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+}

@@ -1,0 +1,88 @@
+.timerHeader{
+    display: flex;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    margin-top: -120px;
+    z-index: 120;
+    padding: 2.5rem;
+    border-bottom: 1px solid #56E3B8;
+    background-color: #ECE0F8;
+    height: 19vh;
+}
+.timerHeader__title{
+    display: flex;
+    flex: 1;
+    margin-left: 2vw;
+    font-size: large;
+    font-weight: 300;
+}
+.timerHeader__clock{
+    display: flex;
+    padding-right: 10vw;
+    padding-top: 2px;
+
+}
+.timerHeader__clock > p{
+    padding-right: 10px;
+}
+.timerHeader__clock__container{
+    display: flex;
+}
+.timerHeader__clock__container > p{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.timerHeader__clock__time{
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: gray;
+    color: white;
+    height: 20px;
+}
+.timerHeader__button{
+    padding-right: 40px;
+}
+
+@media screen and (max-width: 720px){
+    .timerHeader{
+        padding: 0.5rem 0 0 0.5rem;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 19vh;
+    }
+    .timerHeader__title{
+        margin-left: 2vw;
+        font-size: medium;
+        font-weight: bold;
+        flex: 0;
+    }
+    .timerHeader__clock{
+        display: flex;
+        flex-direction: column;
+        padding-right: 0vw;
+        padding-top: 0px;
+    }
+    .timerHeader__clock > p{
+        padding-right: 10px;
+        font-size: small;
+        font-weight: lighter;
+        color: gray;
+    }
+    .timerHeader__clock__container > p{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .timerHeader__clock__time{
+        padding-right: 2px;
+        padding-left: 2px;
+        background-color: darkgray;
+        color: white;
+        height: 20px;
+    }
+    .timerHeader__button{
+        font-size: small;
+        padding-right: 40px;
+    }
+}

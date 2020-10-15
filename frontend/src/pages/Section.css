@@ -1,0 +1,18 @@
+.section{
+    background-color: #EEE;
+}
+.section > h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+    background-color: #3c3c3c;
+    color: white;
+    border-bottom: 3px solid #56E3B8;
+}
+.subsection{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 15px;
+}
