@@ -39,6 +39,7 @@
 .sidePanel__questionNavigation__buttons > button{
     margin-left: 4px;
     margin-right: 4px;
+    padding-left: 5px !important;
     height: 2rem !important;
     width: 2rem !important;
     border-color: #56E3B8 ;

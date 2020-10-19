@@ -34,12 +34,13 @@ function Home(props){
 
                 <div className="home__row">
                     {
-                        props.tests.tests.map((test) =>{
+                        props.tests.tests.map((test,index) =>{
                             return(
                                     <Card src={baseUrl+test.url}
                                           description={test.description}
                                           title={test.title}
-                                          id={test.id}
+                                          id={test._id}
+                                          index={index}
                                     />
                             )
                         })

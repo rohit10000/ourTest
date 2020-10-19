@@ -2,6 +2,36 @@ import React, {useEffect, useState} from "react";
 import "./TimerHeader.css";
 import Button from "@material-ui/core/Button";
 import {useHistory} from "react-router-dom";
+import {Loading} from "./Loading";
+
+
+function RenderTopicTitle({topic, topicsErrMess, topicsLoading}){
+    if(topicsLoading){
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        )
+    }
+    else if(topicsErrMess){
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h4>{topicsErrMess}</h4>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    else{
+        return (
+            <p>{topic.name}</p>
+        )
+    }
+}
 
 function TimerHeader(props){
 
@@ -39,7 +69,6 @@ function TimerHeader(props){
             }
 
         }
-        console.log("DEBUG IN TIMERHEADER: ", resultClass);
 
         props.addResultScore(score);
         props.addResultClass(resultClass);
@@ -80,10 +109,13 @@ function TimerHeader(props){
 
     }, [second]);
 
+
     return(
         <div className={"timerHeader"}>
             <div className={"timerHeader__title"}>
-                <p>{props.topic.topic.name}</p>
+                <RenderTopicTitle topic={props.topic}
+                                 topicsErrMess={props.topicsErrMess}
+                                 topicsLoading={props.topicsLoading}/>
             </div>
             <div className={"timerHeader__clock"}>
                 <p>Time Left </p>

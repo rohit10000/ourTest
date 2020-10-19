@@ -53,7 +53,6 @@ export const fetchTests = () => {
 }
 
 //Fetching section information
-
 export const sectionsLoading = () =>{
     return{
         type: ActionTypes.SECTIONS_LOADING
@@ -97,30 +96,30 @@ export const fetchSections = () => {
     }
 }
 
-//Topic
-export const topicLoading = () =>{
+//fetching topic information
+export const topicsLoading = () =>{
     return{
         type: ActionTypes.TOPIC_LOADING
     }
 }
-export const topicFailed = (errmess) => {
+export const topicsFailed = (errmess) => {
     return{
         type: ActionTypes.TOPIC_FAILED,
         payload: errmess
     }
 }
-export const addTopic = (topic) => {
+export const addTopics = (topics) => {
     return{
-        type: ActionTypes.ADD_TOPIC,
-        payload: topic
+        type: ActionTypes.ADD_TOPICS,
+        payload: topics
     }
 }
 
-export const fetchTopic = (topicId) => {
+export const fetchTopics = () => {
     return function (dispatch){
-        dispatch(quizLoading());
+        dispatch(topicsLoading());
 
-        fetch(`http://localhost:5000/topics/${topicId}`)
+        fetch(baseUrl+'topics')
             .then(response => {
                 if(response.ok)
                     return response;
@@ -134,36 +133,16 @@ export const fetchTopic = (topicId) => {
                 throw errmess;
             })
             .then(response => response.json())
-            .then(topic => {
-                dispatch(addTopic(topic));
-
-                //LOGIC FOR SETTING UP QUIZ STATES
-                let numberOfQuestions = topic.questions.length;
-
-                //logic for setting up visited list
-                let list = Array(numberOfQuestions).fill(false);
-                list[0] = true;
-                dispatch(setVisitedQuestions(list));
-
-                //logic for setting up answered list
-                list = Array(numberOfQuestions).fill(false);
-                dispatch(setAnsweredQuestions(list));
-
-                //logic for setting up yourAnswer list
-                list = Array(numberOfQuestions).fill(0);
-                dispatch(setYourAnswers(list));
-
-                //logic for setting up quiz
-                dispatch(addQuestions(topic.questions));
+            .then(topics => {
+                dispatch(addTopics(topics));
             })
             .catch(error => {
-                dispatch(quizFailed(error.message));
-                dispatch(topicFailed(error.message));
+                dispatch(topicsFailed(error.message));
             });
     }
 }
 
-//Quiz
+//fetching information for quiz
 
 export const quizLoading = () =>{
     return{
@@ -180,6 +159,51 @@ export const addQuestions = (questions) => {
     return{
         type: ActionTypes.ADD_QUESTIONS,
         payload: questions
+    }
+}
+
+export const fetchQuiz = (topicId) =>{
+    return function (dispatch){
+        dispatch(quizLoading());
+
+        fetch(baseUrl+'topic/'+topicId+'/questions')
+            .then(response => {
+                if(response.ok)
+                    return response;
+                else{
+                    let error = new Error('Error '+response.status+': '+response.statusText);
+                    error.response = response;
+                    throw error;
+                }
+            }, error => {
+                let errmess = new Error(error.message);
+                throw errmess;
+            })
+            .then(response => response.json())
+            .then(questions => {
+
+                //LOGIC FOR SETTING UP QUIZ STATES
+                let numberOfQuestions = questions.length;
+
+                //logic for setting up visited list
+                let list = Array(numberOfQuestions).fill(false);
+                list[0] = true;
+                dispatch(setVisitedQuestions(list));
+
+                //logic for setting up answered list
+                list = Array(numberOfQuestions).fill(false);
+                dispatch(setAnsweredQuestions(list));
+
+                //logic for setting up yourAnswer list
+                list = Array(numberOfQuestions).fill(-1);
+                dispatch(setYourAnswers(list));
+
+                //logic for setting up quiz
+                dispatch(addQuestions(questions));
+            })
+            .catch(error => {
+                dispatch(quizFailed(error.message));
+            });
     }
 }
 

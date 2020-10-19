@@ -10,7 +10,7 @@ export const ADD_SECTIONS = 'ADD_SECTIONS';
 
 export const TOPIC_LOADING = 'TOPIC_LOADING';
 export const TOPIC_FAILED = 'TOPIC_FAILED';
-export const ADD_TOPIC = 'ADD_TOPIC';
+export const ADD_TOPICS = 'ADD_TOPICS';
 
 export const QUIZ_LOADING = 'QUIZ_LOADING';
 export const ADD_QUESTIONS = 'ADD_QUESTIONS';

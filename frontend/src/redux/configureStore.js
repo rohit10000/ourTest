@@ -6,7 +6,7 @@ import {Quiz} from "./quiz";
 
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import {Topic} from "./topic";
+import {Topics} from "./topics";
 import {Result} from "./result";
 
 export const ConfigureStore = () => {
@@ -15,7 +15,7 @@ export const ConfigureStore = () => {
             user: User,
             tests: Tests,
             sections: Sections,
-            topic: Topic,
+            topics: Topics,
             quiz: Quiz,
             result: Result
         }),

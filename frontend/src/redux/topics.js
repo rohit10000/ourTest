@@ -1,16 +1,16 @@
 import * as ActionTypes from "./ActionTypes";
 
-export const Topic = (state={
+export const Topics = (state={
     isLoading: true,
     errMess: null,
-    topic: null
+    topics: []
 }, action) => {
     switch (action.type){
-        case ActionTypes.ADD_TOPIC:
+        case ActionTypes.ADD_TOPICS:
             return{
                 ...state,
                 errMess: null,
-                topic: action.payload,
+                topics: action.payload,
                 isLoading: false
             }
         case ActionTypes.TOPIC_LOADING:
@@ -18,7 +18,7 @@ export const Topic = (state={
                 ...state,
                 isLoading: true,
                 errMess: null,
-                topic: null
+                topics: []
             }
         case ActionTypes.TOPIC_FAILED:
             return {

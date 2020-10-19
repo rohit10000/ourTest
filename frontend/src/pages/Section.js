@@ -92,6 +92,9 @@ class Section extends Component{
                                                  toggleSection={this.toggleSection}
                                                  openClass={this.state.openClass}
                                                  section={section}
+                                                 topics={this.props.topics.filter((topic) => topic.sectionId === section._id)}
+                                                 topicsLoading={this.props.topicsLoading}
+                                                 topicsErrMess={this.props.topicsErrMess}
                                     />
                                 </div>
                                 )

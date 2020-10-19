@@ -5,6 +5,33 @@ import {Breadcrumb, BreadcrumbItem} from "reactstrap";
 import {Link} from "react-router-dom";
 import {Loading} from "../components/Loading";
 
+function RenderTopicTitle({topic, topicsErrMess, topicsLoading}){
+    if(topicsLoading){
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        )
+    }
+    else if(topicsErrMess){
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h4>{topicsErrMess}</h4>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    else{
+        return (
+            <p><strong>Your result </strong> for <strong>{topic.name} </strong> test</p>
+        )
+    }
+}
 
 function Result(props){
 
@@ -22,7 +49,9 @@ function Result(props){
             <div className={"result"}>
                 <div className={"result__header"}>
                     <div className={"result__header__title"}>
-                        <p><strong>Your result </strong> for <strong>{props.topic.topic.name} </strong> test</p>
+                        <RenderTopicTitle topic={props.topic}
+                                          topicsErrMess={props.topicsErrMess}
+                                          topicsLoading={props.topicsLoading}/>
                     </div>
                     <div className={"result__header__score"}>
                         <p>You scored <strong>{props.result.resultScore} </strong>
@@ -39,11 +68,11 @@ function Result(props){
                 </div>
                 <div className={"result__body"}>
                     {
-                        props.quiz.questions.map((info, index) => {
+                        props.quiz.questions.map((question, index) => {
                             return(
-                                <ResultCard question={info.text}
-                                            options={info.options}
-                                            answer={info.answer}
+                                <ResultCard questionText={question.text}
+                                            options={question.options}
+                                            answer={question.answer}
                                             index={index}
                                             resultClass={props.result.resultClass[index]}
                                             yourAnswer={props.quiz.yourAnswers[index]}

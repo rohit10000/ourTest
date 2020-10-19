@@ -1,7 +1,7 @@
 import React from "react";
 import "./ResultCard.css";
 
-function ResultCard({question, options, answer, index, resultClass, yourAnswer}){
+function ResultCard({questionText, options, answer, index, resultClass, yourAnswer}){
 
     return(
         <div className={"resultCard"}>
@@ -10,22 +10,22 @@ function ResultCard({question, options, answer, index, resultClass, yourAnswer})
             </div>
             <div className={"resultCard__question"}>
                 <div className={"resultCard__question__text"}>
-                    <p>{question}</p>
+                    <p>{questionText}</p>
                 </div>
                 <div className={"resultCard__question__options"}>
                     {
-                        options.map((info, i)=>{
+                        options.map((option, i)=>{
                             return(
-                                i+1 === yourAnswer ? (
-                                        <div className={"option"}>
-                                            <input type={"radio"} name={"question"+index} value={i+1} checked={true}/>
-                                            <p>{info}</p>
+                                option.index == yourAnswer ? (
+                                        <div className={"option"} key={i}>
+                                            <input type={"radio"} name={"question"+index} value={option.index} checked={true}/>
+                                            <p>{option.text}</p>
                                         </div>
                                     ):
                                     (
-                                        <div className={"option"}>
-                                            <input type={"radio"} name={"question"+index} value={i+1}/>
-                                            <p>{info}</p>
+                                        <div className={"option"} key={i}>
+                                            <input type={"radio"} name={"question"+index} value={option.index}/>
+                                            <p>{option.text}</p>
                                         </div>
                                     )
 
@@ -35,7 +35,7 @@ function ResultCard({question, options, answer, index, resultClass, yourAnswer})
                 </div>
             </div>
             <div className={"resultCard__result__container "+resultClass}>
-                <p>Correct Answer is: {answer.value}</p>
+                <p>Correct Answer is: {answer.text}</p>
             </div>
 
 

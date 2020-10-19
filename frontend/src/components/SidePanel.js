@@ -1,7 +1,38 @@
 import React, {useState} from "react";
 import "./SidePanel.css";
+import {Loading} from "./Loading";
+
+function RenderSidePanelTitle({topic, topicsLoading, topicsErrMess}){
+    if(topicsLoading){
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        )
+    }
+    else if(topicsErrMess){
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h4>{topicsErrMess}</h4>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    else {
+        return(
+            <p style={{paddingLeft: "10px"}}>{topic.name}</p>
+        )
+
+    }
+}
 
 function SidePanel(props){
+    console.log("Debug in Side Panel:", props);
     const [flag, setFlag] = useState(false);
 
     const innerWidth = window.innerWidth;
@@ -143,7 +174,9 @@ function SidePanel(props){
             }>
                 <div className={"sidePanel__questionNavigation__title"}>
                     <strong>Section:</strong>
-                    <p style={{paddingLeft: "10px"}}>{props.topic.name}</p>
+                    <RenderSidePanelTitle topic={props.topic}
+                                          topicsLoading={props.topicsLoading}
+                                          topicsErrMess={props.topicsErrMess}/>
                 </div>
                 <div style={{height:"40vh"}}>
                     <div className={"sidePanel__questionNavigation__buttons"}>
