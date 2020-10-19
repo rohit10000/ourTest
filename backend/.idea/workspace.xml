@@ -11,52 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f45ebdd-fda2-449e-a140-6c18d48ebaf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/questions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/sections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/questionRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/sectionRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/testRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/baseUrl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/logo192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/topic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/topicRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/topicRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Card.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/QuestionPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/QuestionPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/QuizFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/QuizFooter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ResultCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/ResultCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/SectionCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/SectionCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/SidePanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/SidePanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/TimerHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/TimerHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/contextAPI/Reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/contextAPI/StateProvider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/contextAPI/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/data/defaultState.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/data/local.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/images/cat.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/images/gate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/images/jee.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/images/upsc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Logs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Logs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Result.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Signup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/utility/authenticateUtility.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/utility/storeUtility.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +59,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -104,6 +73,21 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -124,7 +108,7 @@
       <workItem from="1602766978779" duration="153000" />
       <workItem from="1602767210144" duration="478000" />
       <workItem from="1602923346283" duration="3196000" />
-      <workItem from="1603071090169" duration="478000" />
+      <workItem from="1603071090169" duration="25129000" />
     </task>
     <servers />
   </component>
@@ -157,12 +141,16 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="409" y="199" width="609" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1294.741/1366.0.1360.768@72.27.1294.741" timestamp="1600001483637" />
-    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603071611230">
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603083109376">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1603083109376" />
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603113810012">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="920" y="133" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1360.768@1366.0.1360.768" timestamp="1600102647654" />
     <state x="502" y="155" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1360.768@72.27.1294.741" timestamp="1602767357105" />
-    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1603071611230" />
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1603113810012" />
     <state x="1366" y="155" key="FileChooserDialogImpl/72.27.2654.741@72.27.2654.741" timestamp="1599486431656" />
     <state width="1248" height="88" key="GridCell.Tab.0.bottom" timestamp="1600001866352">
       <screen x="72" y="27" width="1294" height="741" />
@@ -184,11 +172,15 @@
     </state>
     <state width="1248" height="88" key="GridCell.Tab.0.right/72.27.1294.741/1366.0.1360.768@72.27.1294.741" timestamp="1600001866352" />
     <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1599477609220" />
-    <state x="411" y="95" width="955" height="673" key="dock-window-1" timestamp="1603071612625">
+    <state x="1113" y="111" width="686" height="697" key="dock-window-1" timestamp="1603072650162">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="1994" y="71" width="1003" height="697" key="dock-window-1/72.27.1294.741/1366.0.1360.768@72.27.1294.741" timestamp="1603035491655" />
-    <state x="411" y="95" width="955" height="673" key="dock-window-1/72.27.1294.741@72.27.1294.741" timestamp="1603071612625" />
+    <state x="1113" y="111" width="686" height="697" key="dock-window-1/72.27.1294.741@72.27.1294.741" timestamp="1603072650162" />
+    <state x="811" y="114" width="1050" height="593" key="dock-window-2" timestamp="1603075555955">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="811" y="114" width="1050" height="593" key="dock-window-2/72.27.1294.741@72.27.1294.741" timestamp="1603075555955" />
     <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1599481380187">
       <screen x="72" y="27" width="2654" height="741" />
     </state>

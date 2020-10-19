@@ -1,8 +1,11 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.container{
+  background-color: #ccc;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-
-a {
-  color: #00B7FF;
+.row-content {
+  margin:0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height:400px;
 }

@@ -6,7 +6,12 @@ let cors = require('cors');
 
 
 const mongoose = require('mongoose');
-const testRouter = require('./routes/topicRouter');
+
+const testRouter = require('./routes/testRouter');
+const sectionRouter = require('./routes/sectionRouter');
+const topicRouter = require('./routes/topicRouter');
+const questionRouter = require('./routes/questionRouter');
+
 const authRouter = require('./routes/authRouter');
 
 const url = "mongodb://localhost:27017/ourTest";
@@ -27,10 +32,15 @@ app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//routes for tests
 app.use('/', testRouter);
+app.use('/', sectionRouter);
+app.use('/', topicRouter);
+app.use('/', questionRouter);
+
+
 app.use('/', authRouter);
 
 // catch 404 and forward to error handler
