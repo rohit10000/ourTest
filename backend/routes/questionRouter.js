@@ -48,4 +48,15 @@ questionRouter.route('/questions/:questionId')
             .catch((err) => next(err));
     });
 
+questionRouter.route('/topic/:topicId/questions/')
+    .get((req, res, next) => {
+        Questions.find({'topicId': req.params.topicId})
+            .then((questions) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(questions);
+            }, (err) => next(err))
+            .catch((err) => next(err));
+    })
+
 module.exports = questionRouter;

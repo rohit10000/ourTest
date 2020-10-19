@@ -11,7 +11,7 @@ const testRouter = require('./routes/testRouter');
 const sectionRouter = require('./routes/sectionRouter');
 const topicRouter = require('./routes/topicRouter');
 const questionRouter = require('./routes/questionRouter');
-
+const uploadRouter = require('./routes/uploadRouter');
 const authRouter = require('./routes/authRouter');
 
 const url = "mongodb://localhost:27017/ourTest";
@@ -39,7 +39,7 @@ app.use('/', testRouter);
 app.use('/', sectionRouter);
 app.use('/', topicRouter);
 app.use('/', questionRouter);
-
+app.use('/', uploadRouter);
 
 app.use('/', authRouter);
 
