@@ -1,0 +1,81 @@
+{
+  "tests": [
+    {
+      "title": "GATE Test",
+      "description": "This is whatever. App provides simple mathematical functions in a beautifully designed interface. It performs basic calculations such as addition, subtraction, multiplication, and division.",
+      "url": "images/gate.png",
+      "id": 0
+    },
+    {
+      "title": "Jee Advance",
+      "description": "App provides simple mathematical functions in a beautifully designed interface. It performs basic calculations such as addition, subtraction, multiplication, and division.",
+      "url": "images/jee.webp",
+      "id":1
+    },
+    {
+      "title": "CAT Test",
+      "description": "App provides simple mathematical functions in a beautifully designed interface. It performs basic calculations such as addition, subtraction, multiplication, and division.",
+      "url": "images/cat.jpeg",
+      "id": 2
+    }
+  ],
+
+  "sections": [
+      { "id": 0,
+        "testId": 0,
+        "name":"Physics",
+        "topics":[
+          {"name": "Electrostatics", "id": "5f5b6d99e329b50bfd0329f5"},
+          {"name": "Simple Harmonic Motion", "id":"5f5b6d99e329b50bfd0329f5"},
+          {"name":"Friction", "id":"5f5b6d99e329b50bfd0329f5"}
+        ]
+      },
+      {
+        "id": 1,
+        "testId": 0,
+        "name":"Chemistry",
+        "topics":[
+          {"name": "Mole Concept", "id": "5f5b6d99e329b50bfd0329f5"},
+          {"name": "Solid, Liquid and Gas", "id":"5f5b6d99e329b50bfd0329f5"},
+          {"name": "Organic", "id":"5f5b6d99e329b50bfd0329f5"}
+        ]
+      },
+      {
+        "id": 2,
+        "testId": 0,
+        "name":"Mathematics",
+        "topics":[
+          {"name": "Relations and Functions", "id": "5f5b576203130afeafb583d3"},
+          {"name": "Trigonometric Equations", "id":"5f5b6d99e329b50bfd0329f5"},
+          {"name": "Mathematical Induction", "id":"5f5b6d99e329b50bfd0329f5"}
+        ]
+      },
+      {
+        "id": 3,
+        "testId": 1,
+        "name":"Database Management System",
+        "topics":[
+          {"name": "Normalization", "id": "5f5b6d99e329b50bfd0329f5"},
+          {"name": "Transaction", "id":"5f5b6d99e329b50bfd0329f5"}
+        ]
+      },
+      {
+        "id": 4,
+        "testId": 1,
+        "name":"Operating System",
+        "topics":[
+          {"name": "Process Management", "id": "5f5b6d99e329b50bfd0329f5"},
+          {"name": "Memory Management", "id":"5f5b6d99e329b50bfd0329f5"}
+        ]
+      },
+      {
+        "id": 5,
+        "testId": 2,
+        "name":"Aptitude Ability",
+        "topics":[
+          {"name": "Logical Reasoning", "id": "5f5b576203130afeafb583d3"},
+          {"name": "Probability", "id":"5f5b576203130afeafb583d3"}
+        ]
+      }
+  ]
+}

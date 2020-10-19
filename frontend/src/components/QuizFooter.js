@@ -1,53 +1,46 @@
 import React, {useState} from "react";
 import "./QuizFooter.css";
-import {
-    setActiveQuestion,
-    updateAnsweredQuestions,
-    updateVisitedQuestions,
-    updateYourAnswer
-} from "../contextAPI/actions";
 
-import {useStateValue} from "../contextAPI/StateProvider";
 import {Modal, ModalBody, ModalHeader} from "reactstrap";
 
-function QuizFooter(){
-
-    const [state, dispatch] = useStateValue();
+function QuizFooter(props){
 
     const [isModalOpen, toggleModel] = useState(false);
 
 
-    const updateState = () => {
+    const saveAndNext = () => {
+        let numberOfQuestions = props.quiz.questions.length;
 
-        updateVisitedQuestions(parseInt(state.activeQuestion) - 1, dispatch);
+        //logic for updating visited questions
+        props.updateVisitedQuestions((props.quiz.activeQuestion+1)%numberOfQuestions);
 
-        let element = document.getElementById(state.activeQuestion);
 
+        //logic for updating yourAnswer
+        let element = document.getElementById(props.quiz.activeQuestion);
         let userAnswer = (element
-            .querySelector('input[name=question'+state.activeQuestion+']:checked')||{}).value;
+            .querySelector('input[name=question'+props.quiz.activeQuestion+']:checked')||{}).value;
 
         if(userAnswer!=undefined){
-
-            updateYourAnswer(userAnswer, dispatch);
-
+            props.updateYourAnswers(props.quiz.activeQuestion, userAnswer);
         }
         else{
-            updateYourAnswer(0, dispatch);
+            props.updateYourAnswers(props.quiz.activeQuestion, 0);
         }
 
+        //logic for updating answered questions
         if(userAnswer != undefined){
-            updateAnsweredQuestions(true, dispatch);
+            props.updateAnsweredQuestions(props.quiz.activeQuestion, true);
         }else{
-            updateAnsweredQuestions(false, dispatch);
+            props.updateAnsweredQuestions(props.quiz.activeQuestion, false);
         }
 
-        let k = (parseInt(state.activeQuestion) % state.topicDetails.questions.length)+1;
-        setActiveQuestion(k, dispatch);
+        //logic for updating active questions
+        props.updateActiveQuestion((props.quiz.activeQuestion+1)%numberOfQuestions);
     }
 
     const clearResponse = () =>{
         for(let i = 0; i<4; i++){
-            document.getElementById(state.activeQuestion+"_"+(parseInt(i)+1)).checked = false;
+            document.getElementById(props.quiz.activeQuestion + "_" + i).checked = false;
         }
     }
     return(
@@ -56,13 +49,12 @@ function QuizFooter(){
             <Modal isOpen={isModalOpen} toggle={() => toggleModel(!isModalOpen)}>
                 <ModalHeader>Instructions</ModalHeader>
                 <ModalBody>
-
-
+                    <p>Complete the test.</p>
                 </ModalBody>
             </Modal>
             <div className={"quizFooter__left"}>
                 <button className="btn btn-primary" onClick={clearResponse}>Clear Response</button>
-                <button className="btn btn-primary" onClick={updateState}>Save & Next</button>
+                <button className="btn btn-primary" onClick={saveAndNext}>Save & Next</button>
             </div>
 
             <div className={"quizFooter__right"}>

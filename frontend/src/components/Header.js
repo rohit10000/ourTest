@@ -1,24 +1,21 @@
 import React from "react";
 import "./Header.css";
-import {Link, useHistory} from "react-router-dom";
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import {useStateValue} from "../contextAPI/StateProvider";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import {logout} from "../utility/authenticateUtility";
+import {useHistory} from "react-router-dom";
 
-function Header(){
+function Header({user}){
 
-    const [state, dispatch] = useStateValue();
     const history = useHistory();
 
     return (
         <div className={"navbar__container"}>
             <Navbar className="header fixed-top" expand="lg" variant={"dark"}>
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="/home">
                     <img className="header__logo"
                          src={require("../images/logo.png")}
                          alt="" />
@@ -43,10 +40,10 @@ function Header(){
                         <div style={{flex:1}}>
                         </div>
                         {
-                            state.authorizedUser ? (
+                            user.authorizedUser ? (
                                 <div className={"header__login"}>
-                                    <a style={{color: "white"}} onClick={()=>{history.push('/yourLogs')}}>Your Logs</a>
-                                    <a style={{color: "white"}} onClick={() => logout(dispatch, history)}>Logout</a>
+                                    <a style={{color: "white"}}>Your Logs</a>
+                                    <a style={{color: "white"}}>Logout</a>
                                     <ExitToAppIcon style={{color: "white", fontSize:"x-large"}}/>
                                 </div>
                             ):(

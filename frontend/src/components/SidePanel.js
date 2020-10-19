@@ -1,11 +1,7 @@
 import React, {useState} from "react";
-import {useStateValue} from "../contextAPI/StateProvider";
 import "./SidePanel.css";
-import {setActiveQuestion, updateVisitedQuestions} from "../contextAPI/actions";
 
-function SidePanel(){
-    const [state, dispatch] = useStateValue();
-
+function SidePanel(props){
     const [flag, setFlag] = useState(false);
 
     const innerWidth = window.innerWidth;
@@ -49,11 +45,9 @@ function SidePanel(){
         }
     }
 
-    const updateActive = (i) => {
-        setActiveQuestion(i+1, dispatch);
-
-        updateVisitedQuestions(i, dispatch);
-        console.log(state.activeQuestion.length)
+    const updateActive = (index) => {
+        props.updateActiveQuestion(index);
+        props.updateVisitedQuestions(index);
     }
 
     const toggleFlag = () =>{
@@ -149,36 +143,36 @@ function SidePanel(){
             }>
                 <div className={"sidePanel__questionNavigation__title"}>
                     <strong>Section:</strong>
-                    <p style={{paddingLeft: "10px"}}>{state.topicDetails.name}</p>
+                    <p style={{paddingLeft: "10px"}}>{props.topic.name}</p>
                 </div>
                 <div style={{height:"40vh"}}>
                     <div className={"sidePanel__questionNavigation__buttons"}>
                         {
-                            state.topicDetails.questions.map((info, index)=>{
-                                if(state.activeQuestion == index+1) {
+                            props.quiz.questions.map((question, index)=>{
+                                if(props.quiz.activeQuestion === index) {
                                     return (
-                                        <button id={index + 1} className={"sidePanel__active btnCommonAttr btn"} onClick={()=>updateActive(index)}>
+                                        <button id={index} className={"sidePanel__active btnCommonAttr btn"} onClick={()=>updateActive(index)}>
                                             {index + 1}
                                         </button>
                                     );
                                 }
-                                else if(state.answeredQuestion[index]){
+                                else if(props.quiz.answeredQuestions[index]){
                                     return (
-                                        <button id={index + 1} className={"sidePanel__answered btnCommonAttr btn"} onClick={()=>updateActive(index)}>
+                                        <button id={index} className={"sidePanel__answered btnCommonAttr btn"} onClick={()=>updateActive(index)}>
                                             {index + 1}
                                         </button>
                                     )
                                 }
-                                else if(state.visitedQuestion[index]){
+                                else if(props.quiz.visitedQuestions[index]){
                                     return (
-                                        <button id={index + 1} className={"sidePanel__notAnswered btnCommonAttr btn"} onClick={()=>updateActive(index)}>
+                                        <button id={index} className={"sidePanel__notAnswered btnCommonAttr btn"} onClick={()=>updateActive(index)}>
                                             {index + 1}
                                         </button>
                                     )
                                 }
                                 else {
                                     return (
-                                        <button id={index + 1} className={"sidePanel__notVisited btnCommonAttr btn"} onClick={()=>updateActive(index)}>
+                                        <button id={index} className={"sidePanel__notVisited btnCommonAttr btn"} onClick={()=>updateActive(index)}>
                                             {index + 1}
                                         </button>
                                     );

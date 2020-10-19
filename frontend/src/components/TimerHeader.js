@@ -2,10 +2,8 @@ import React, {useEffect, useState} from "react";
 import "./TimerHeader.css";
 import Button from "@material-ui/core/Button";
 import {useHistory} from "react-router-dom";
-import {useStateValue} from "../contextAPI/StateProvider";
-import {setYourScore, updateResultClass} from "../contextAPI/actions";
 
-function TimerHeader(){
+function TimerHeader(props){
 
     const buttonStyles = {
         largeSize:{
@@ -17,23 +15,22 @@ function TimerHeader(){
         }
     }
 
-    const [state, dispatch] = useStateValue();
 
-    const [hour, setHour] = useState(["00"]);
+    const [hour, _] = useState(["00"]);
     const [minute, setMinute] = useState(["59"]);
     const [second, setSecond] = useState(["14"]);
 
     const history = useHistory();
 
     const resultCalculation = function (){
-        let numberOfQuestions = state.topicDetails.questions.length;
+        let numberOfQuestions = props.quiz.questions.length;
         let resultClass = Array(numberOfQuestions).fill("");
 
         let score = 0;
 
         for(let i = 0; i<numberOfQuestions; i++){
 
-            if(state.topicDetails.questions[i].answer.index == state.yourAnswer[i]){
+            if(props.quiz.questions[i].answer.index == props.quiz.yourAnswers[i]){
                 resultClass[i] = "resultSuccess";
                 score++;
             }
@@ -42,10 +39,10 @@ function TimerHeader(){
             }
 
         }
-        console.log(resultClass);
+        console.log("DEBUG IN TIMERHEADER: ", resultClass);
 
-        updateResultClass(resultClass, dispatch);
-        setYourScore(score, dispatch);
+        props.addResultScore(score);
+        props.addResultClass(resultClass);
 
         alert("Your test is over. Click okay to proceed...");
 
@@ -59,7 +56,7 @@ function TimerHeader(){
         (function (){
             setTimeout(function (){
                 if(second == "00"){
-                    if(minute =="00"){
+                    if(minute == "00"){
                         resultCalculation();
                     }
                     else {
@@ -86,7 +83,7 @@ function TimerHeader(){
     return(
         <div className={"timerHeader"}>
             <div className={"timerHeader__title"}>
-                <p>{state.topicDetails.name}</p>
+                <p>{props.topic.topic.name}</p>
             </div>
             <div className={"timerHeader__clock"}>
                 <p>Time Left </p>

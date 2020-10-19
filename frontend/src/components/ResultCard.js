@@ -1,10 +1,7 @@
 import React from "react";
 import "./ResultCard.css";
-import {useStateValue} from "../contextAPI/StateProvider";
 
-function ResultCard({question, options, answer, index, resultClass}){
-
-    const [state, _] = useStateValue();
+function ResultCard({question, options, answer, index, resultClass, yourAnswer}){
 
     return(
         <div className={"resultCard"}>
@@ -19,7 +16,7 @@ function ResultCard({question, options, answer, index, resultClass}){
                     {
                         options.map((info, i)=>{
                             return(
-                                i+1 == state.yourAnswer[index] ? (
+                                i+1 === yourAnswer ? (
                                         <div className={"option"}>
                                             <input type={"radio"} name={"question"+index} value={i+1} checked={true}/>
                                             <p>{info}</p>
@@ -37,7 +34,7 @@ function ResultCard({question, options, answer, index, resultClass}){
                     }
                 </div>
             </div>
-            <div className={"resultCard__result__container "+resultClass[index]}>
+            <div className={"resultCard__result__container "+resultClass}>
                 <p>Correct Answer is: {answer.value}</p>
             </div>
 
