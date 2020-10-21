@@ -1,12 +1,141 @@
 import * as ActionTypes from "./ActionTypes";
 import {baseUrl} from "../shared/baseUrl";
+import {actions} from "react-redux-form";
 
-export const addUser = (user) => {
-    return({
-        type: ActionTypes.ADD_USER,
-        payload: user
-    })
+// Signup related actions
+
+export const signupLoading = () =>{
+    return{
+        type: ActionTypes.SIGNUP_LOADING
+    }
 }
+export const signupDone = () => {
+    return{
+        type: ActionTypes.SIGNUP_DONE
+    }
+}
+export const signupFailed = (errMess) =>{
+    return{
+        type: ActionTypes.SIGNUP_FAILED,
+        payload: errMess
+    }
+}
+
+export const postSignup = (firstname, lastname, email, password) => {
+    return function (dispatch){
+        // dispatch(signupLoading());
+
+        fetch(baseUrl+"user/signup", {
+            method: 'POST',
+            body: JSON.stringify({
+                firstname,
+                lastname,
+                email,
+                password
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "same-origin"
+        })
+            .then(response => response.json())
+            .then(response => {
+
+                if(response.ok === false){
+                    dispatch(signupFailed(response.message));
+                }
+                else {
+                    dispatch(signupDone());
+                    alert("Registered successfully !");
+                    dispatch(actions.reset('feedback'));
+                }
+            })
+            .catch(error =>  {
+                dispatch(signupFailed(error.toString()));
+            });
+    };
+}
+
+//USER related actions
+
+export const userLoading = () =>{
+    return{
+        type: ActionTypes.USER_LOADING
+    }
+}
+export const userFailed = (errMess) =>{
+    return{
+        type: ActionTypes.USER_FAILED,
+        payload: errMess
+    }
+}
+export const addUserToken = (token) =>{
+    return{
+        type: ActionTypes.ADD_USER_TOKEN,
+        payload: token
+    }
+}
+export const addUserId = (userId) => {
+    return{
+        type: ActionTypes.ADD_USER_ID,
+        payload: userId
+    }
+}
+
+
+// Login related actions
+
+export const loginLoading = () =>{
+    return{
+        type: ActionTypes.LOGIN_LOADING
+    }
+}
+export const loginDone = () => {
+    return{
+        type: ActionTypes.LOGIN_DONE
+    }
+}
+export const loginFailed = (errMess) =>{
+    return{
+        type: ActionTypes.LOGIN_FAILED,
+        payload: errMess
+    }
+}
+
+export const postLogin = (email, password) => {
+    return function (dispatch){
+        // dispatch(loginLoading());
+
+        fetch(baseUrl+"user/login", {
+            method: 'POST',
+            body: JSON.stringify({
+                email,
+                password
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "same-origin"
+        })
+            .then(response => response.json())
+            .then(response => {
+
+                if(response.ok === false){
+                    dispatch(loginFailed(response.message));
+                }
+                else {
+                    dispatch(addUserToken(response.token));
+                    dispatch(addUserId(response.userId));
+                    dispatch(loginDone());
+                    dispatch(actions.reset('feedback'));
+                }
+            })
+            .catch(error =>  {
+                dispatch(loginFailed(error.toString()));
+            });
+    };
+}
+
 
 //Fetching test information
 export const testsLoading = () =>{

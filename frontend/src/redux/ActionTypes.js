@@ -1,4 +1,15 @@
-export const ADD_USER = 'ADD_USER';
+export const ADD_USER_ID = 'ADD_USER_ID';
+export const USER_LOADING = 'USER_LOADING';
+export const USER_FAILED = 'USER_FAILED';
+export const ADD_USER_TOKEN = 'ADD_USER_TOKEN';
+
+export const SIGNUP_LOADING = 'SIGNUP_LOADING';
+export const SIGNUP_FAILED = 'SIGNUP_FAILED';
+export const SIGNUP_DONE = 'SIGNUP_DONE';
+
+export const LOGIN_LOADING = 'LOGIN_LOADING';
+export const LOGIN_FAILED = 'LOGIN_FAILED';
+export const LOGIN_DONE = 'LOGIN_DONE';
 
 export const TESTS_LOADING = 'TESTS_LOADING';
 export const TESTS_FAILED = 'TESTS_FAILED';

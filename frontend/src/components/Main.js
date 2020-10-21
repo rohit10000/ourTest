@@ -1,15 +1,17 @@
 import React, {Component} from "react";
 import { connect } from 'react-redux';
 import {Route, Switch, withRouter, Redirect} from "react-router-dom";
+import { actions } from 'react-redux-form';
 
 import Footer from "./Footer";
 import Header from "./Header";
-import {fetchSections, fetchTests, fetchTopics} from "../redux/ActionCreators";
+import {fetchSections, fetchTests, fetchTopics, postLogin, postSignup} from "../redux/ActionCreators";
 import Home from "../pages/Home";
 import Section from "../pages/Section";
 import Quiz from "../pages/Quiz";
 import Result from "../pages/Result";
-import SidePanel from "./SidePanel";
+import Signup from "../pages/Signup";
+import Login from "../pages/Login";
 
 //Main component is the center point of this app. So, it is the class component because it is involved in
 //keeping track of the state and all the dispatch methods are declared here.
@@ -67,6 +69,7 @@ class Main extends Component{
                         <Quiz/>
                     </Route>
 
+                    {/*route for result page*/}
                     <Route exact path={"/result"}>
                         <Header user={this.props.user} />
                         <Result result={this.props.result}
@@ -77,6 +80,25 @@ class Main extends Component{
                                 topicsErrMess={this.props.topics.errMess}/>
                         <Footer/>
                     </Route>
+s
+                    <Route exact path={"/signup"}>
+                        <Header user={this.props.user} />
+                        <Signup signup={this.props.signup}
+                                user={this.props.user}
+                                resetFeedbackForm={this.props.resetFeedbackForm}
+                                postSignup={this.props.postSignup}/>
+                        <Footer/>
+                    </Route>
+
+                    <Route exact path={"/login"}>
+                        <Header user={this.props.user} />
+                        <Login login={this.props.login}
+                                user={this.props.user}
+                                resetFeedbackForm={this.props.resetFeedbackForm}
+                                postSignup={this.props.postLogin}/>
+                        <Footer/>
+                    </Route>
+
                     <Redirect to="/home" />
                 </Switch>
 
@@ -91,14 +113,21 @@ const mapStateToProps = state => {
         sections: state.sections,
         topics: state.topics,
         quiz: state.quiz,
-        result: state.result
+        result: state.result,
+        signup: state.signup,
+        login: state.login
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return{
         fetchTests: ()=> dispatch(fetchTests()),
         fetchSections: () => dispatch(fetchSections()),
-        fetchTopics: () => dispatch(fetchTopics())
+        fetchTopics: () => dispatch(fetchTopics()),
+        resetFeedbackForm: ()=>{
+            dispatch(actions.reset('feedback'))
+        },
+        postSignup: (firstname, lastname, email, password) => dispatch(postSignup(firstname, lastname, email, password)),
+        postLogin: (email, password) => dispatch(postLogin(email,password))
     }
 }
 

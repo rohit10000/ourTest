@@ -1,0 +1,59 @@
+.signup{
+    padding: 4vh 25vw 6vh 25vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.signup__title{
+    font-size: x-large;
+    color: midnightblue;
+}
+.signup__oauth{
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+.signup__oauth__title{
+    margin-bottom: 4vh;
+    font-weight: lighter;
+    font-size: small;
+}
+.signup__oauth__image{
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+}
+.signup__separator{
+    display: flex;
+    justify-items: center;
+    margin-bottom: 4vh;
+}
+.signup__separator > div {
+    padding-top: 1vh;
+    flex: 1;
+    font-weight: lighter;
+    color: #ccc;
+}
+.signup__separator__hr{
+    font-weight: lighter;
+    color: red;
+}
+.signup__separator > p{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-weight: lighter;
+    color: gray;
+}
+.signup__local{
+    margin-bottom: 4vh;
+    text-align: left;
+}
+.signup__login__option > p > a{
+    color: #0879FA!important;
+    cursor: pointer!important;
+}
+
+@media screen and (max-width: 720px){
+    .signup{
+        padding: 4vh 15vw 6vh 15vw;
+    }
+}
