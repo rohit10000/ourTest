@@ -11,7 +11,7 @@ const topicRouter = require('./routes/topicRouter');
 const questionRouter = require('./routes/questionRouter');
 const uploadRouter = require('./routes/uploadRouter');
 const authRouter = require('./routes/authRouter');
-
+const logRouter = require('./routes/logRouter');
 const config = require('./config');
 
 const url = config.mongoUrl;
@@ -44,6 +44,7 @@ app.use('/', questionRouter);
 app.use('/', uploadRouter);
 
 app.use('/', authRouter);
+app.use('/', logRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next){
