@@ -5,6 +5,8 @@ const User = require('../models/users');
 const authRouter = express.Router();
 authRouter.use(bodyParser.json());
 
+const authenticate = require('../authenticate');
+
 authRouter.route('/user/signup')
     .post((req, res, next) => {
 
@@ -36,8 +38,7 @@ authRouter.route('/user/signup')
                 .catch(err => next(err));
         })
             .then((user) => {
-
-            console.log("User created");
+            console.log("User created", user);
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
             res.json(user);
@@ -49,7 +50,47 @@ authRouter.route('/user/login')
     .post((req, res, next) => {
 
         //login logic goes here
+        new Promise((resolve, reject) => {
+            User.findOne({'email': req.body.email, 'password': req.body.password})
+                .then((user) => {
+                    if(!user){
+                        resolve({
+                            message: "Email/Password does not match!",
+                            ok: false,
+                            userId: null,
+                            token: null
+                        })
+                    }
+                    else{
+                        let payload = {
+                            email: user.email,
+                            password: user.password
+                        }
+                        let accessToken = authenticate.getToken(payload);
 
+                        console.log("Debug: Token created! ", accessToken);
+                        resolve({
+                            message: "User found. Access token sent",
+                            ok: true,
+                            userId: user._id,
+                            token: accessToken
+                        })
+                    }
+                }, (err) => next(err))
+                .catch(err => {
+                    next(err);
+                });
+        })
+            .then((response) => {
+
+                console.log("User Match found");
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(response);
+            })
+            .catch((err) => {
+                next(err);
+            });
 
     });
 module.exports = authRouter;

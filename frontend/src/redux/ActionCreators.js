@@ -119,11 +119,12 @@ export const postLogin = (email, password) => {
         })
             .then(response => response.json())
             .then(response => {
-
+                console.log("Debug in post login ", JSON.stringify(response));
                 if(response.ok === false){
                     dispatch(loginFailed(response.message));
                 }
                 else {
+                    console.log()
                     dispatch(addUserToken(response.token));
                     dispatch(addUserId(response.userId));
                     dispatch(loginDone());
@@ -291,11 +292,18 @@ export const addQuestions = (questions) => {
     }
 }
 
-export const fetchQuiz = (topicId) =>{
+export const fetchQuiz = (topicId, accessToken) =>{
     return function (dispatch){
         dispatch(quizLoading());
-
-        fetch(baseUrl+'topic/'+topicId+'/questions')
+        console.log("Debug in fetchQuiz ", accessToken)
+        fetch(baseUrl+'topic/'+topicId+'/questions', {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "bearer "+accessToken
+            },
+            credentials: "same-origin"
+        })
             .then(response => {
                 if(response.ok)
                     return response;

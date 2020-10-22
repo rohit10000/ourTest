@@ -5,7 +5,7 @@ import { actions } from 'react-redux-form';
 
 import Footer from "./Footer";
 import Header from "./Header";
-import {fetchSections, fetchTests, fetchTopics, postLogin, postSignup} from "../redux/ActionCreators";
+import {fetchSections, fetchTests, fetchTopics, postLogin, postSignup, userLoading} from "../redux/ActionCreators";
 import Home from "../pages/Home";
 import Section from "../pages/Section";
 import Quiz from "../pages/Quiz";
@@ -51,7 +51,7 @@ class Main extends Component{
                     information as input as because our home component is concerned in showing test cards
                     e.g. jee advance, gate, cat, etc.*/}
                     <Route path={"/home"}>
-                        <Header user={this.props.user} />
+                        <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Home tests={this.props.tests}/>
                         <Footer/>
                     </Route>
@@ -65,13 +65,13 @@ class Main extends Component{
 
                     {/*route for quiz page. It only matches the topicId from the url and there on does its work.*/}
                     <Route path={'/quiz/:topicId'}>
-                        <Header user={this.props.user} />
+                        <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Quiz/>
                     </Route>
 
                     {/*route for result page*/}
                     <Route exact path={"/result"}>
-                        <Header user={this.props.user} />
+                        <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Result result={this.props.result}
                                 quiz={this.props.quiz}
                                 topic={this.props.topics.topics.filter((topic) => this.props.quiz.questions[0] &&
@@ -82,7 +82,7 @@ class Main extends Component{
                     </Route>
 s
                     <Route exact path={"/signup"}>
-                        <Header user={this.props.user} />
+                        <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Signup signup={this.props.signup}
                                 user={this.props.user}
                                 resetFeedbackForm={this.props.resetFeedbackForm}
@@ -91,11 +91,11 @@ s
                     </Route>
 
                     <Route exact path={"/login"}>
-                        <Header user={this.props.user} />
+                        <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Login login={this.props.login}
                                 user={this.props.user}
                                 resetFeedbackForm={this.props.resetFeedbackForm}
-                                postSignup={this.props.postLogin}/>
+                                postLogin={this.props.postLogin}/>
                         <Footer/>
                     </Route>
 
@@ -126,6 +126,7 @@ const mapDispatchToProps = (dispatch) => {
         resetFeedbackForm: ()=>{
             dispatch(actions.reset('feedback'))
         },
+        userLoading: () => dispatch(userLoading()),
         postSignup: (firstname, lastname, email, password) => dispatch(postSignup(firstname, lastname, email, password)),
         postLogin: (email, password) => dispatch(postLogin(email,password))
     }

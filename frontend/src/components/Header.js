@@ -8,7 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import {useHistory} from "react-router-dom";
 
-function Header({user}){
+function Header({user, userLoading}){
 
     const history = useHistory();
 
@@ -40,10 +40,10 @@ function Header({user}){
                         <div style={{flex:1}}>
                         </div>
                         {
-                            user.authorizedUser ? (
+                            user.accessToken ? (
                                 <div className={"header__login"}>
                                     <a style={{color: "white"}}>Your Logs</a>
-                                    <a style={{color: "white"}}>Logout</a>
+                                    <a style={{color: "white"}} onClick={() => userLoading()}>Logout</a>
                                     <ExitToAppIcon style={{color: "white", fontSize:"x-large"}}/>
                                 </div>
                             ):(

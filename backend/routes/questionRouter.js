@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const Questions = require('../models/questions');
+const authenticate = require('../authenticate');
 
 const questionRouter = express.Router();
 questionRouter.use(bodyParser.json());
@@ -49,7 +50,7 @@ questionRouter.route('/questions/:questionId')
     });
 
 questionRouter.route('/topic/:topicId/questions/')
-    .get((req, res, next) => {
+    .get( authenticate.verifyUser, (req, res, next) => {
         Questions.find({'topicId': req.params.topicId})
             .then((questions) => {
                 res.statusCode = 200;

@@ -11,19 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f45ebdd-fda2-449e-a140-6c18d48ebaf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../frontend/src/redux/forms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/redux/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/redux/signup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/redux/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authenticate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/authRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/questionRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/questionRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/SidePanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/SidePanel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Quiz.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/redux/ActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/ActionCreators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/redux/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/ActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/redux/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/redux/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,7 @@
       <workItem from="1602766978779" duration="153000" />
       <workItem from="1602767210144" duration="478000" />
       <workItem from="1602923346283" duration="3196000" />
-      <workItem from="1603071090169" duration="42714000" />
+      <workItem from="1603071090169" duration="57287000" />
     </task>
     <servers />
   </component>

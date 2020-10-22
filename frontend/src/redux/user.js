@@ -4,7 +4,7 @@ export const User = (state = {
     isLoading: true,
     errMess: [],
     authorizedUserId: null,
-    token:null
+    accessToken:null
     }, action) => {
     switch (action.type){
         case ActionTypes.ADD_USER_ID:
@@ -20,7 +20,7 @@ export const User = (state = {
                 isLoading: true,
                 errMess: [],
                 authorizedUserId: null,
-                token:null
+                accessToken: null
             }
         case ActionTypes.USER_FAILED:
             return {
@@ -33,7 +33,7 @@ export const User = (state = {
                 ...state,
                 isLoading: false,
                 errMess: [],
-                token: action.payload
+                accessToken: action.payload
             }
         default:
             return state;

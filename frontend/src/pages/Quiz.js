@@ -1,10 +1,10 @@
 import React,{Component} from "react";
 import {
     addResultClass, addResultScore, fetchQuiz,
-    fetchTopics, updateActiveQuestion, updateAnsweredQuestions,
+    updateActiveQuestion, updateAnsweredQuestions,
     updateVisitedQuestions, updateYourAnswers
 } from "../redux/ActionCreators";
-import {withRouter } from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import "./Quiz.css";
 import {Loading} from "../components/Loading";
@@ -12,23 +12,34 @@ import QuizFooter from "../components/QuizFooter";
 import SidePanel from "../components/SidePanel";
 import QuestionPanel from "../components/QuestionPanel";
 import TimerHeader from "../components/TimerHeader";
+import {Button, Modal, ModalBody, ModalHeader} from 'reactstrap';
 
 class Quiz extends Component{
     constructor(props) {
         super(props);
 
         this.state = {
-            topicId: this.props.match.params.topicId
+            topicId: this.props.match.params.topicId,
+            accessToken: this.props.user.accessToken,
+            isModalOpen: true
         }
+
+        this.toggleModal = this.toggleModal.bind(this);
     }
 
-
     componentDidMount() {
-        this.props.fetchQuiz(this.state.topicId);
+        this.props.fetchQuiz(this.state.topicId, this.state.accessToken);
+    }
+
+    toggleModal(){
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
+        });
     }
 
     render() {
         console.log("Debug in Quiz: ", this.props.topics);
+
         if(this.props.quiz.isLoading){
             return (
                 <div className="container">
@@ -36,6 +47,26 @@ class Quiz extends Component{
                         <Loading />
                     </div>
                 </div>
+            )
+        }
+        else if(!this.props.user || !this.props.user.accessToken){
+            return (
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>Your are not authenticated, please login before you continue.</ModalHeader>
+                    <ModalBody>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12">
+                                    <h4>{this.props.quiz.errMess}</h4>
+                                    <Link to={"/home"}>
+                                        <Button type="button" color="primary">Home</Button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                    </ModalBody>
+                </Modal>
             )
         }
         else if(this.props.quiz.errMess){
@@ -87,12 +118,13 @@ const mapStateToProps = state => {
     return {
         quiz: state.quiz,
         topics: state.topics,
-        result: state.result
+        result: state.result,
+        user: state.user
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return{
-        fetchQuiz: (topicId) => dispatch(fetchQuiz(topicId)),
+        fetchQuiz: (topicId, accessToken) => dispatch(fetchQuiz(topicId, accessToken)),
         updateVisitedQuestions: (index) => dispatch(updateVisitedQuestions(index)),
         updateAnsweredQuestions: (index, flag) => dispatch(updateAnsweredQuestions(index, flag)),
         updateYourAnswers: (index, answer) => dispatch(updateYourAnswers(index, answer)),

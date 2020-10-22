@@ -45,6 +45,7 @@
 }
 .login__local{
     margin-bottom: 4vh;
+    text-align: left;
 }
 .login__local_form{
     display: flex;

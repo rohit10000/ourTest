@@ -14,7 +14,9 @@ const questionRouter = require('./routes/questionRouter');
 const uploadRouter = require('./routes/uploadRouter');
 const authRouter = require('./routes/authRouter');
 
-const url = "mongodb://localhost:27017/ourTest";
+const config = require('./config');
+
+const url = config.mongoUrl;
 const connect = mongoose.connect(url);
 
 connect.then((db) => {
