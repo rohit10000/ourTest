@@ -5,6 +5,9 @@ import Alert from "react-bootstrap/Alert";
 import {Loading} from "../components/Loading";
 import {Control, Form} from "react-redux-form";
 import {Button, Col, Label, Row} from "reactstrap";
+import GoogleLogin from "react-google-login";
+
+import {clientId} from "../shared/config";
 
 function Login(props){
     const history = useHistory();
@@ -19,6 +22,11 @@ function Login(props){
         history.push('/home');
     }
 
+    const authenticateGoogle = (response) => {
+        console.log(response.profileObj);
+        props.postGoogle(response.profileObj);
+    }
+
     return(
         <div className={"login"}>
             <div className={"login__title"}>
@@ -28,8 +36,20 @@ function Login(props){
                 <div className={"login__oauth__title"}>
                     LOG IN USING
                 </div>
-                <img className={"login__oauth__image"} src={require("../images/google.jpg")}
+
+                <GoogleLogin
+                    clientId = {clientId}
+                    buttonText= "Login"
+                    onSuccess={authenticateGoogle}
+                    onFailure={authenticateGoogle}
+                    cookiePolicy={'single_host_origin'}
+                    render={renderProps => (
+                        <div style={{cursor: "pointer"}} onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                            <img className={"login__oauth__image"} src={require("../images/google.jpg")}/>
+                        </div>
+                    )}
                 />
+
             </div>
             <div className={"login__separator"}>
                 <div >
@@ -104,3 +124,10 @@ function Login(props){
 }
 
 export default Login;
+
+{/*    render={() => (*/}
+{/*    <button> This is my custom Google button</button>*/}
+{/*)}*/}
+{/*    render={() => {*/}
+
+{/*}}*/}

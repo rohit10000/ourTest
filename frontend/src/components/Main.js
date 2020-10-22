@@ -5,7 +5,15 @@ import { actions } from 'react-redux-form';
 
 import Footer from "./Footer";
 import Header from "./Header";
-import {fetchSections, fetchTests, fetchTopics, postLogin, postSignup, userLoading} from "../redux/ActionCreators";
+import {
+    fetchSections,
+    fetchTests,
+    fetchTopics,
+    postGoogle,
+    postLogin,
+    postSignup,
+    userLoading
+} from "../redux/ActionCreators";
 import Home from "../pages/Home";
 import Section from "../pages/Section";
 import Quiz from "../pages/Quiz";
@@ -85,6 +93,7 @@ s
                         <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Signup signup={this.props.signup}
                                 user={this.props.user}
+                                postGoogle={this.props.postGoogle}
                                 resetFeedbackForm={this.props.resetFeedbackForm}
                                 postSignup={this.props.postSignup}/>
                         <Footer/>
@@ -94,6 +103,7 @@ s
                         <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Login login={this.props.login}
                                 user={this.props.user}
+                                postGoogle={this.props.postGoogle}
                                 resetFeedbackForm={this.props.resetFeedbackForm}
                                 postLogin={this.props.postLogin}/>
                         <Footer/>
@@ -128,7 +138,8 @@ const mapDispatchToProps = (dispatch) => {
         },
         userLoading: () => dispatch(userLoading()),
         postSignup: (firstname, lastname, email, password) => dispatch(postSignup(firstname, lastname, email, password)),
-        postLogin: (email, password) => dispatch(postLogin(email,password))
+        postLogin: (email, password) => dispatch(postLogin(email,password)),
+        postGoogle: (profile) => dispatch(postGoogle(profile))
     }
 }
 

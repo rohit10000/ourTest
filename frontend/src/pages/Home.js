@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import Card from "../components/Card";
 import {Loading} from "../components/Loading";
-import {baseUrl} from "../shared/baseUrl";
+import {baseUrl} from "../shared/config";
 
 function Home(props){
     if(props.tests.isLoading){

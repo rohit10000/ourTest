@@ -3,8 +3,6 @@ let express = require('express');
 let path = require('path');
 let logger = require('morgan');
 let cors = require('cors');
-
-
 const mongoose = require('mongoose');
 
 const testRouter = require('./routes/testRouter');
@@ -34,7 +32,9 @@ app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 //routes for tests
 app.use('/', testRouter);

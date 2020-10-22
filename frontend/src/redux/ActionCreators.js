@@ -1,6 +1,45 @@
 import * as ActionTypes from "./ActionTypes";
-import {baseUrl} from "../shared/baseUrl";
+import {baseUrl} from "../shared/config";
 import {actions} from "react-redux-form";
+
+// Oauth related actions
+//Google
+
+export const postGoogle = (profile) => {
+    return function (dispatch){
+
+        fetch(baseUrl+"oauth/google", {
+            method: 'POST',
+            body: JSON.stringify({
+                firstname: profile.givenName,
+                lastname: profile.familyName,
+                email: profile.email,
+                googleId: profile.googleId,
+                imageUrl: profile.imageUrl
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "same-origin"
+        })
+            .then(response => response.json())
+            .then(response => {
+                console.log("Debug in google oauth ", JSON.stringify(response));
+                if(response.ok === false){
+                    dispatch(loginFailed(response.message));
+                }
+                else {
+                    dispatch(addUserToken(response.token));
+                    dispatch(addUserId(response.userId));
+                    dispatch(loginDone());
+                    dispatch(actions.reset('feedback'));
+                }
+            })
+            .catch(error =>  {
+                dispatch(loginFailed(error.toString()));
+            });
+    };
+}
 
 // Signup related actions
 
@@ -119,7 +158,6 @@ export const postLogin = (email, password) => {
         })
             .then(response => response.json())
             .then(response => {
-                console.log("Debug in post login ", JSON.stringify(response));
                 if(response.ok === false){
                     dispatch(loginFailed(response.message));
                 }

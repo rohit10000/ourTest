@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const User = require('../models/users');
+const passport = require('passport');
 
 const authRouter = express.Router();
 authRouter.use(bodyParser.json());
@@ -93,4 +94,54 @@ authRouter.route('/user/login')
             });
 
     });
+
+authRouter.route('/oauth/google')
+    .post((req, res, next) => {
+
+        //google oauth logic goes here
+        new Promise((resolve, reject) => {
+            User.findOne({'googleId': req.body.googleId})
+                .then((user) => {
+                    if(!user){
+                        User.create(req.body)
+                            .then((user) => {
+                                console.log("Created user details: ", user);
+
+                                let accessToken = authenticate.getToken({userId: user._id});
+                                console.log("User Created. Access token: ", accessToken);
+                                resolve({
+                                    message: "User Created. Access token sent!",
+                                    ok: true,
+                                    userId: user._id,
+                                    token: accessToken
+                                })
+                            })
+                            .catch(err => next(err));
+                    }
+                    else{
+                        let accessToken = authenticate.getToken({userId: user._id});
+                        console.log("User Already created. Access token: ", accessToken);
+                        resolve({
+                            message: "User found. Access token sent!",
+                            ok: true,
+                            userId: user._id,
+                            token: accessToken
+                        })
+                    }
+                }, (err) => next(err))
+                .catch(err => {
+                    next(err);
+                });
+        })
+            .then((response) => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json(response);
+            })
+            .catch((err) => {
+                    next(err);
+            });
+
+    });
+
 module.exports = authRouter;
