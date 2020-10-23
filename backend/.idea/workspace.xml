@@ -11,11 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f45ebdd-fda2-449e-a140-6c18d48ebaf3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/logs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/logRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/redux/logs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/shared/storage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/components/TimerHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/TimerHeader.js" afterDir="false" />
@@ -23,6 +22,7 @@
       <change beforePath="$PROJECT_DIR$/../frontend/src/redux/ActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/ActionCreators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/redux/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/ActionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/redux/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/redux/logs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../coursera/front_end_with_react_js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -70,21 +70,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/config" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,7 +90,8 @@
       <workItem from="1602766978779" duration="153000" />
       <workItem from="1602767210144" duration="478000" />
       <workItem from="1602923346283" duration="3196000" />
-      <workItem from="1603071090169" duration="74592000" />
+      <workItem from="1603071090169" duration="74833000" />
+      <workItem from="1603468202490" duration="599000" />
     </task>
     <servers />
   </component>

@@ -38,6 +38,10 @@ export const RESULT_LOADING = 'RESULT_LOADING';
 export const ADD_RESULT_CLASS = 'ADD_RESULT_CLASS';
 export const ADD_RESULT_SCORE = 'ADD_RESULT_SCORE';
 
+export const LOGS_LOADING = 'LOGS_LOADING';
+export const ADD_LOGS = 'ADD_LOGS';
+export const LOGS_FAILED = 'LOGS_FAILED';
+
 
 
 

@@ -6,6 +6,7 @@ import { actions } from 'react-redux-form';
 import Footer from "./Footer";
 import Header from "./Header";
 import {
+    fetchLogs,
     fetchSections,
     fetchTests,
     fetchTopics,
@@ -20,6 +21,7 @@ import Quiz from "../pages/Quiz";
 import Result from "../pages/Result";
 import Signup from "../pages/Signup";
 import Login from "../pages/Login";
+import Logs from "../pages/Logs";
 
 //Main component is the center point of this app. So, it is the class component because it is involved in
 //keeping track of the state and all the dispatch methods are declared here.
@@ -109,6 +111,14 @@ s
                         <Footer/>
                     </Route>
 
+                    <Route exact path={"/logs"}>
+                        <Header user={this.props.user} userLoading={this.props.userLoading}/>
+                        <Logs logs={this.props.logs}
+                              user={this.props.user}
+                              fetchLogs={this.props.fetchLogs}/>
+                        <Footer/>
+                    </Route>
+
                     <Redirect to="/home" />
                 </Switch>
 
@@ -125,7 +135,8 @@ const mapStateToProps = state => {
         quiz: state.quiz,
         result: state.result,
         signup: state.signup,
-        login: state.login
+        login: state.login,
+        logs: state.logs
     }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -139,7 +150,8 @@ const mapDispatchToProps = (dispatch) => {
         userLoading: () => dispatch(userLoading()),
         postSignup: (firstname, lastname, email, password) => dispatch(postSignup(firstname, lastname, email, password)),
         postLogin: (email, password) => dispatch(postLogin(email,password)),
-        postGoogle: (profile) => dispatch(postGoogle(profile))
+        postGoogle: (profile) => dispatch(postGoogle(profile)),
+        fetchLogs: (userId) => dispatch(fetchLogs(userId))
     }
 }
 

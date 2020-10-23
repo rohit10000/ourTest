@@ -45,7 +45,6 @@ function TimerHeader(props){
         }
     }
 
-
     const [hour, _] = useState(["00"]);
     const [minute, setMinute] = useState(["59"]);
     const [second, setSecond] = useState(["14"]);
@@ -72,7 +71,7 @@ function TimerHeader(props){
 
         props.addResultScore(score);
         props.addResultClass(resultClass);
-
+        props.postLog(props.topic.name, score, numberOfQuestions, props.user.authorizedUserId);
         alert("Your test is over. Click okay to proceed...");
 
         setTimeout(()=>{

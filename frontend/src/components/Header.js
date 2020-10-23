@@ -42,7 +42,7 @@ function Header({user, userLoading}){
                         {
                             user.accessToken ? (
                                 <div className={"header__login"}>
-                                    <a style={{color: "white"}}>Your Logs</a>
+                                    <a style={{color: "white"}} onClick={() => {history.push('/logs')}}>Your Logs</a>
                                     <a style={{color: "white"}} onClick={() => userLoading()}>Logout</a>
                                     <ExitToAppIcon style={{color: "white", fontSize:"x-large"}}/>
                                 </div>

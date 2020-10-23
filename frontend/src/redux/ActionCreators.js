@@ -427,7 +427,6 @@ export const updateActiveQuestion = (index) => {
     }
 }
 
-//Result
 
 export const resultLoading = () =>{
     return{
@@ -445,6 +444,66 @@ export const addResultScore = (score) =>{
         type: ActionTypes.ADD_RESULT_SCORE,
         payload: score
     }
+}
+
+
+
+export const logsLoading = () =>{
+    return{
+        type: ActionTypes.LOGS_LOADING
+    }
+}
+export const logsFailed = (errmess) => {
+    return{
+        type: ActionTypes.LOGS_FAILED,
+        payload: errmess
+    }
+}
+export const addLogs = (logs) => {
+    return{
+        type: ActionTypes.ADD_LOGS,
+        payload: logs
+    }
+}
+export const fetchLogs = (userId) => {
+    return function (dispatch){
+        dispatch(logsLoading());
+
+        fetch(baseUrl+`user/${userId}/logs`)
+            .then(response => response.json())
+            .then(logs => {
+                console.log("Debug in fetch logs: ", logs);
+                dispatch(addLogs(logs))
+            })
+            .catch(error => dispatch(logsFailed(error.message)));
+    }
+}
+
+export const postLog = (name, scoredMarks, totalMarks, userId) => {
+    return function (dispatch){
+
+        fetch(baseUrl+"logs", {
+            method: 'POST',
+            body: JSON.stringify({
+                name,
+                scoredMarks,
+                totalMarks,
+                userId
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "same-origin"
+        })
+            .then(response => response.json())
+            .then(log => {
+                console.log("Debug in post log: ", log);
+                dispatch(fetchLogs(userId));
+            })
+            .catch(error =>  {
+                console.log("Debug in log post: ", error.message);
+            });
+    };
 }
 
 

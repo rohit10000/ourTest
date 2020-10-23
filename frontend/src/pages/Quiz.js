@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import {
-    addResultClass, addResultScore, fetchQuiz,
+    addResultClass, addResultScore, fetchQuiz, postLog, quizLoading,
     updateActiveQuestion, updateAnsweredQuestions,
     updateVisitedQuestions, updateYourAnswers
 } from "../redux/ActionCreators";
@@ -20,7 +20,6 @@ class Quiz extends Component{
 
         this.state = {
             topicId: this.props.match.params.topicId,
-            accessToken: this.props.user.accessToken,
             isModalOpen: true
         }
 
@@ -28,7 +27,13 @@ class Quiz extends Component{
     }
 
     componentDidMount() {
-        this.props.fetchQuiz(this.state.topicId, this.state.accessToken);
+        this.props.fetchQuiz(this.state.topicId, this.props.user.accessToken);
+        console.log("component mounted");
+    }
+
+    componentWillUnmount() {
+        window.onbeforeunload = null;
+        console.log("component unmounted");
     }
 
     toggleModal(){
@@ -36,6 +41,8 @@ class Quiz extends Component{
             isModalOpen: !this.state.isModalOpen
         });
     }
+
+
 
     render() {
         console.log("Debug in Quiz: ", this.props.topics);
@@ -87,6 +94,9 @@ class Quiz extends Component{
                                  topicsLoading={this.props.topics.isLoading}
                                  topicsErrMess={this.props.topics.errMess}
                                  quiz={this.props.quiz}
+                                 user={this.props.user}
+                                 postLog={this.props.postLog}
+                                 quizLoading={this.props.quizLoading}
                                  addResultScore={this.props.addResultScore}
                                  addResultClass={this.props.addResultClass}/>
 
@@ -130,7 +140,9 @@ const mapDispatchToProps = (dispatch) => {
         updateYourAnswers: (index, answer) => dispatch(updateYourAnswers(index, answer)),
         updateActiveQuestion: (index) => dispatch(updateActiveQuestion(index)),
         addResultClass: (list) => dispatch(addResultClass(list)),
-        addResultScore: (score) => dispatch(addResultScore(score))
+        addResultScore: (score) => dispatch(addResultScore(score)),
+        quizLoading: () => dispatch(quizLoading()),
+        postLog: (name, scoredMarks, totalMarks, userId) => dispatch(postLog(name, scoredMarks, totalMarks, userId))
     }
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Quiz));

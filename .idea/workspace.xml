@@ -11,7 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe1b8ac9-a90c-4b63-a01c-d763ea0fc4e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/shared/storage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimerHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TimerHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/ActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/ActionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/ActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/logs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../coursera/front_end_with_react_js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,19 +61,6 @@
       <recent name="$PROJECT_DIR$/frontend" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602767672630</updated>
       <workItem from="1602767673914" duration="2362000" />
+      <workItem from="1603479497411" duration="329000" />
     </task>
     <servers />
   </component>
@@ -86,6 +87,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602770946044">
