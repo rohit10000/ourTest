@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5f8d0d0573bb891fa6803e7a"},"testId":"5f8cfadd0aad1618b290ca4a","name":"Physics","__v":0}
+{"_id":{"$oid":"5f8d0d1773bb891fa6803e7b"},"testId":"5f8cfadd0aad1618b290ca4a","name":"Mathematics","__v":0}
+{"_id":{"$oid":"5f8d0d3573bb891fa6803e7c"},"testId":"5f8cfadd0aad1618b290ca4a","name":"Chemistry","__v":0}
+{"_id":{"$oid":"5f8d0d8b73bb891fa6803e7d"},"testId":"5f8cfa9c0aad1618b290ca49","name":"Database Management System","__v":0}
+{"_id":{"$oid":"5f8d0d9a73bb891fa6803e7e"},"testId":"5f8cfa9c0aad1618b290ca49","name":"Operating System","__v":0}
+{"_id":{"$oid":"5f8d0de973bb891fa6803e7f"},"testId":"5f8cfaef0aad1618b290ca4b","name":"Aptitude Ability","__v":0}

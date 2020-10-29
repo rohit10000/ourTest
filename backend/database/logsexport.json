@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5f91d6b8be69cc99dfd32a98"},"userId":null,"name":"Electrostatics","scoredMarks":"0","totalMarks":"22","createdAt":{"$date":"2020-10-22T19:00:09.023Z"},"updatedAt":{"$date":"2020-10-22T19:00:09.023Z"},"__v":0}
+{"_id":{"$oid":"5f91dbf5be69cc99dfd32a9a"},"userId":"5f91c39e392a1b91c0d3f927","name":"Electrostatics","scoredMarks":"1","totalMarks":"22","createdAt":{"$date":"2020-10-22T19:22:29.096Z"},"updatedAt":{"$date":"2020-10-22T19:22:29.096Z"},"__v":0}
+{"_id":{"$oid":"5f931710827935ef2f625d67"},"userId":"5f91c39e392a1b91c0d3f927","name":"Electrostatics","scoredMarks":"0","totalMarks":"22","createdAt":{"$date":"2020-10-23T17:46:56.818Z"},"updatedAt":{"$date":"2020-10-23T17:46:56.818Z"},"__v":0}
