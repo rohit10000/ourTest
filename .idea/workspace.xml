@@ -11,20 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe1b8ac9-a90c-4b63-a01c-d763ea0fc4e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/shared/storage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimerHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TimerHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/ActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/ActionCreators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/ActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/logs.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +62,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602767672630</updated>
       <workItem from="1602767673914" duration="2362000" />
-      <workItem from="1603479497411" duration="329000" />
+      <workItem from="1603479497411" duration="467000" />
+      <workItem from="1603983177778" duration="644000" />
     </task>
     <servers />
   </component>

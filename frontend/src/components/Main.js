@@ -60,7 +60,7 @@ class Main extends Component{
                     to check whether any user is signed in or not. Also home component takes tests
                     information as input as because our home component is concerned in showing test cards
                     e.g. jee advance, gate, cat, etc.*/}
-                    <Route path={"/home"}>
+                    <Route exact path={"/home"}>
                         <Header user={this.props.user} userLoading={this.props.userLoading}/>
                         <Home tests={this.props.tests}/>
                         <Footer/>

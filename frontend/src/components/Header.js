@@ -15,10 +15,10 @@ function Header({user, userLoading}){
     return (
         <div className={"navbar__container"}>
             <Navbar className="header fixed-top" expand="lg" variant={"dark"}>
-                <Navbar.Brand href="/home">
+                <Navbar.Brand href={"/home"}>
                     <img className="header__logo"
                          src={require("../images/logo.png")}
-                         alt="" />
+                         alt=""/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className={"navbar-light"}/>
                 <Navbar.Collapse id="basic-navbar-nav">
