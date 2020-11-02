@@ -9,7 +9,7 @@ function Home(props){
         return (
             <div className="container">
                 <div className="row">
-                    <Loading />
+                    <Loading minHeight={"88vh"}/>
                 </div>
             </div>
         )

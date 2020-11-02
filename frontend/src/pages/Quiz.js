@@ -24,17 +24,28 @@ class Quiz extends Component{
         }
 
         this.toggleModal = this.toggleModal.bind(this);
+        // this.openFullscreen = this.openFullscreen.bind(this);
+        // this.getFullscreenElement = this.getFullscreenElement.bind(this);
+        // this.openFullscreen();
+        //
+        // document.addEventListener('fullscreenchange', () =>{
+        //     if(this.getFullscreenElement()){
+        //         console.log("Your full screen is open");
+        //     }
+        //     else{
+        //         document.documentElement.requestFullscreen().catch((e) => {
+        //             console.log("Debug in full screen", e);
+        //         });
+        //     }
+        // })
+
     }
 
     componentDidMount() {
         this.props.fetchQuiz(this.state.topicId, this.props.user.accessToken);
-        console.log("component mounted");
+
     }
 
-    componentWillUnmount() {
-        window.onbeforeunload = null;
-        console.log("component unmounted");
-    }
 
     toggleModal(){
         this.setState({
@@ -42,7 +53,18 @@ class Quiz extends Component{
         });
     }
 
+    // getFullscreenElement(){
+    //     return document.fullscreenElement
+    //     || document.webkitFullscreenElement
+    //     || document.mozFullscreenElement
+    //     || document.msFullscreenElement;
+    // }
 
+    // openFullscreen(){
+    //     document.documentElement.requestFullscreen().catch((e) => {
+    //         console.log("Debug in full screen", e);
+    //     })
+    // };
 
     render() {
         console.log("Debug in Quiz: ", this.props.topics);
@@ -51,7 +73,7 @@ class Quiz extends Component{
             return (
                 <div className="container">
                     <div className="row">
-                        <Loading />
+                        <Loading minHeight={"60vh"}/>
                     </div>
                 </div>
             )
@@ -98,7 +120,8 @@ class Quiz extends Component{
                                  postLog={this.props.postLog}
                                  quizLoading={this.props.quizLoading}
                                  addResultScore={this.props.addResultScore}
-                                 addResultClass={this.props.addResultClass}/>
+                                 addResultClass={this.props.addResultClass}
+                    />
 
                     <div className={"quiz__content"}>
                         <div className={"quiz__content__leftSide"}>
@@ -117,7 +140,9 @@ class Quiz extends Component{
                                 updateVisitedQuestions={this.props.updateVisitedQuestions}
                                 updateAnsweredQuestions={this.props.updateAnsweredQuestions}
                                 updateYourAnswers={this.props.updateYourAnswers}
-                                updateActiveQuestion={this.props.updateActiveQuestion}/>
+                                updateActiveQuestion={this.props.updateActiveQuestion}
+                    />
+
                 </div>
             )
         }

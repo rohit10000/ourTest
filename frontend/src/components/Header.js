@@ -45,6 +45,10 @@ function Header({user, userLoading}){
                                     <a style={{color: "white"}} onClick={() => {history.push('/logs')}}>Your Logs</a>
                                     <a style={{color: "white"}} onClick={() => userLoading()}>Logout</a>
                                     <ExitToAppIcon style={{color: "white", fontSize:"x-large"}}/>
+
+                                    <div className={"header__auth__avatar"}>
+
+                                    </div>
                                 </div>
                             ):(
                                 <div className={"header__login"}>

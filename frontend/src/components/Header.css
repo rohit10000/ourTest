@@ -8,7 +8,7 @@
     top: 0;
 }
 .header__button__group{
-    margin-left: 48vw;
+    margin-left: 45vw;
 }
 .header__logo{
     height: 6rem;
@@ -28,7 +28,7 @@ span:hover{
 }
 .header__login{
     display: flex;
-    margin-left: 5vw;
+    margin-right: 5vw;
 }
 .header__login > a{
     font-weight: lighter;

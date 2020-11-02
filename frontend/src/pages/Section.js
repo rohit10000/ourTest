@@ -6,9 +6,9 @@ import {Loading} from "../components/Loading"
 function RenderTitle(props){
     if(props.testsLoading){
         return (
-            <div className="container">
-                <div className="row">
-                    <Loading />
+            <div className="container ">
+                <div className="row" style={{minHeight: "5vh"}}>
+                    <Loading minHeight={"5vh"}/>
                 </div>
             </div>
         )
@@ -61,7 +61,7 @@ class Section extends Component{
             return (
                 <div className="container">
                     <div className="row">
-                        <Loading />
+                        <Loading minHeight={"63vh"}/>
                     </div>
                 </div>
             )

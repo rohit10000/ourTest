@@ -72,7 +72,7 @@ function TimerHeader(props){
         props.addResultScore(score);
         props.addResultClass(resultClass);
         props.postLog(props.topic.name, score, numberOfQuestions, props.user.authorizedUserId);
-        alert("Your test is over. Click okay to proceed...");
+
 
         setTimeout(()=>{
             history.push("/result");
@@ -134,7 +134,11 @@ function TimerHeader(props){
                 </div>
             </div>
             <div className={"timerHeader__button"}>
-                <Button variant="contained" color="primary" onClick={resultCalculation}
+                <Button variant="contained" color="primary" onClick={() =>{
+                    const flag = window.confirm("Are you sure you want to end the test?");
+                    if(flag)
+                        resultCalculation();
+                }}
                 style={
                     window.innerWidth > 720 ? (buttonStyles.largeSize):(buttonStyles.smallSize)
                 }>

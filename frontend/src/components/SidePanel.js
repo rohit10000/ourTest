@@ -144,20 +144,22 @@ function SidePanel(props){
                 )
             }>
                 <div className={"sidePanel__buttonExplained__box"}>
-                    <button  className={"btnCommonAttr sidePanel__answered"} disabled={true}>2</button>
+                    <button  className={"btnCommonAttr sidePanel__answered"} disabled={true}>{
+                        props.quiz.answeredQuestions.filter((flag) => flag === true).length
+                    }</button>
                     <p>Answered</p>
                 </div>
                 <div className={"sidePanel__buttonExplained__box"}>
-                    <button  className={"btnCommonAttr sidePanel__notVisited"} disabled={true}>0</button>
+                    <button  className={"btnCommonAttr sidePanel__notVisited"} disabled={true}>{
+                        props.quiz.visitedQuestions.length - props.quiz.visitedQuestions.filter((flag) => flag === true).length
+                    }</button>
                     <p>Not Visited</p>
                 </div>
                 <div className={"sidePanel__buttonExplained__box"}>
-                    <button className={"sidePanel__notAnswered btnCommonAttr"} disabled={true}>1</button>
+                    <button className={"sidePanel__notAnswered btnCommonAttr"} disabled={true}>{
+                        props.quiz.visitedQuestions.length - props.quiz.answeredQuestions.filter((flag) => flag === true).length
+                    }</button>
                     <p>Not Answered</p>
-                </div>
-                <div className={"sidePanel__buttonExplained__box"}>
-                    <button className={"sidePanel__activeInfo btnCommonAttr"} disabled={true}>5</button>
-                    <p>Active</p>
                 </div>
             </div>
 
@@ -178,7 +180,7 @@ function SidePanel(props){
                                           topicsLoading={props.topicsLoading}
                                           topicsErrMess={props.topicsErrMess}/>
                 </div>
-                <div style={{height:"40vh"}}>
+                <div style={{height:"50vh"}}>
                     <div className={"sidePanel__questionNavigation__buttons"}>
                         {
                             props.quiz.questions.map((question, index)=>{

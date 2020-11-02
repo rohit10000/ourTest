@@ -18,16 +18,7 @@ const questionSchema = new Schema({
         required: true
     },
     options:[optionSchema],
-    answer:{
-        text:{
-            type: String,
-            required: true
-        },
-        index:{
-            type: Number,
-            required: true
-        }
-    },
+    answer:optionSchema,
     topicId: {
         type: String,
         required: true

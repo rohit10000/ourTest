@@ -7,15 +7,17 @@
 }
 .sidePanel__buttonExplained{
     display: flex;
+    justify-content: space-around;
 }
 .sidePanel__buttonExplained__box{
     display: flex;
     flex-direction: column;
     padding-left: 1vw;
+    align-items: center;
 }
 .sidePanel__buttonExplained__box >p{
     font-size: small;
-    padding-left: 0.7rem;
+    font-weight: lighter;
 }
 .sidePanel__questionNavigation{
     display: flex;
@@ -45,13 +47,14 @@
     border-color: #56E3B8 ;
     border-width: medium;
     border-style: solid;
-
+    display: flex;
+    align-items: center;
 }
 .btnCommonAttr{
     margin-right: 0.5rem;
     border: none;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     color: black;
     margin-left: 1vw;
 }

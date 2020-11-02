@@ -1,5 +1,6 @@
 .section{
     background-color: #EEE;
+    min-height: 63vh;
 }
 .section > h1{
     display: flex;
