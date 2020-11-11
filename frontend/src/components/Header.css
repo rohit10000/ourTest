@@ -8,7 +8,7 @@
     top: 0;
 }
 .header__button__group{
-    margin-left: 45vw;
+    margin-left: 30vw;
 }
 .header__logo{
     height: 6rem;
@@ -38,6 +38,35 @@ span:hover{
     cursor: pointer;
     margin-left: 1vw;
 }
+.header__auth__avatar__image{
+    max-width: 5vw!important;
+    max-height: 5vw!important;
+    border-radius: 50% !important;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #131921;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: gray;
+}
+
+.header__auth__avatar:hover .dropdown-content {
+    display: block;
+}
 
 @media screen and (max-width: 720px){
     .header__nav{
@@ -52,5 +81,21 @@ span:hover{
     .header__option{
         font-weight: lighter;
         font-size: small;
+    }
+    .header__auth__avatar__image{
+        max-width: 10vw!important;
+        max-height: 10vw!important;
+        border-radius: 50% !important;
+        margin-left: 10vw;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 16vw;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        background-color: #131921;
+        font-size: small;
+        font-weight: lighter;
     }
 }

@@ -24,47 +24,17 @@ class Quiz extends Component{
         }
 
         this.toggleModal = this.toggleModal.bind(this);
-        // this.openFullscreen = this.openFullscreen.bind(this);
-        // this.getFullscreenElement = this.getFullscreenElement.bind(this);
-        // this.openFullscreen();
-        //
-        // document.addEventListener('fullscreenchange', () =>{
-        //     if(this.getFullscreenElement()){
-        //         console.log("Your full screen is open");
-        //     }
-        //     else{
-        //         document.documentElement.requestFullscreen().catch((e) => {
-        //             console.log("Debug in full screen", e);
-        //         });
-        //     }
-        // })
-
     }
 
     componentDidMount() {
         this.props.fetchQuiz(this.state.topicId, this.props.user.accessToken);
-
     }
-
 
     toggleModal(){
         this.setState({
             isModalOpen: !this.state.isModalOpen
         });
     }
-
-    // getFullscreenElement(){
-    //     return document.fullscreenElement
-    //     || document.webkitFullscreenElement
-    //     || document.mozFullscreenElement
-    //     || document.msFullscreenElement;
-    // }
-
-    // openFullscreen(){
-    //     document.documentElement.requestFullscreen().catch((e) => {
-    //         console.log("Debug in full screen", e);
-    //     })
-    // };
 
     render() {
         console.log("Debug in Quiz: ", this.props.topics);
@@ -129,6 +99,7 @@ class Quiz extends Component{
                         </div>
                         <div className={"quiz__content__rightSide"}>
                             <SidePanel quiz={this.props.quiz}
+                                       user={this.props.user}
                                        updateVisitedQuestions={this.props.updateVisitedQuestions}
                                        updateActiveQuestion={this.props.updateActiveQuestion}
                                        topic={this.props.topics.topics.filter((topic) => topic._id === this.state.topicId)[0]}

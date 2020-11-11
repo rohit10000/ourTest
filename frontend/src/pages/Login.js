@@ -18,7 +18,7 @@ function Login(props){
         props.postLogin(email, password);
     }
 
-    if(props.user.authorizedUserId){
+    if(props.user.authorizedUserDetail){
         history.push('/home');
     }
 
@@ -124,10 +124,3 @@ function Login(props){
 }
 
 export default Login;
-
-{/*    render={() => (*/}
-{/*    <button> This is my custom Google button</button>*/}
-{/*)}*/}
-{/*    render={() => {*/}
-
-{/*}}*/}

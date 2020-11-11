@@ -16,8 +16,6 @@ import {Login} from "./login";
 import {Logs} from "./logs";
 import {loadState, saveState} from "../shared/storage";
 
-import lodash from 'lodash';
-
 const persistedState = loadState();
 
 export const ConfigureStore = () => {

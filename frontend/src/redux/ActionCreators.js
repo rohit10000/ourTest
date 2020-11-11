@@ -30,7 +30,7 @@ export const postGoogle = (profile) => {
                 }
                 else {
                     dispatch(addUserToken(response.token));
-                    dispatch(addUserId(response.userId));
+                    dispatch(addUserDetail(response.userDetail));
                     dispatch(loginDone());
                     dispatch(actions.reset('feedback'));
                 }
@@ -87,6 +87,7 @@ export const postSignup = (firstname, lastname, email, password) => {
                     dispatch(signupDone());
                     alert("Registered successfully !");
                     dispatch(actions.reset('feedback'));
+                    dispatch(postLogin(email, password));
                 }
             })
             .catch(error =>  {
@@ -114,10 +115,10 @@ export const addUserToken = (token) =>{
         payload: token
     }
 }
-export const addUserId = (userId) => {
+export const addUserDetail = (userDetail) => {
     return{
-        type: ActionTypes.ADD_USER_ID,
-        payload: userId
+        type: ActionTypes.ADD_USER_DETAIL,
+        payload: userDetail
     }
 }
 
@@ -162,9 +163,8 @@ export const postLogin = (email, password) => {
                     dispatch(loginFailed(response.message));
                 }
                 else {
-                    console.log()
                     dispatch(addUserToken(response.token));
-                    dispatch(addUserId(response.userId));
+                    dispatch(addUserDetail(response.userDetail));
                     dispatch(loginDone());
                     dispatch(actions.reset('feedback'));
                 }

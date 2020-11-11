@@ -23,15 +23,15 @@
 }
 .questionPanel__header__marking__digit{
     display: flex;
+    justify-content: center;
 }
 .questionPanel__header__marking__digit > a{
-    padding-top: -3vh;
-    width: 2vw;
-    height: 3vh;
+    width: 3vw;
+    height: 4vh;
+    margin-right: 1px;
     border-radius: 40%;
     text-align: center;
     color: black;
-
 }
 .questionPanel__header__clock{
     padding-right: 2vw;

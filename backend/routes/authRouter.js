@@ -68,12 +68,10 @@ authRouter.route('/user/login')
                             password: user.password
                         }
                         let accessToken = authenticate.getToken(payload);
-
-                        console.log("Debug: Token created! ", accessToken);
                         resolve({
                             message: "User found. Access token sent",
                             ok: true,
-                            userId: user._id,
+                            userDetail: user,
                             token: accessToken
                         })
                     }
@@ -112,7 +110,7 @@ authRouter.route('/oauth/google')
                                 resolve({
                                     message: "User Created. Access token sent!",
                                     ok: true,
-                                    userId: user._id,
+                                    userDetail: user,
                                     token: accessToken
                                 })
                             })
@@ -124,7 +122,7 @@ authRouter.route('/oauth/google')
                         resolve({
                             message: "User found. Access token sent!",
                             ok: true,
-                            userId: user._id,
+                            userDetail: user,
                             token: accessToken
                         })
                     }

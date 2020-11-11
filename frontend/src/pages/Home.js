@@ -28,9 +28,9 @@ function Home(props){
     else{
         return (
             <div className="home">
-                <img className="home__image"
-                     src={require("../images/banner.jpg")}
-                     alt="" />
+                {/*<img className="home__image"*/}
+                {/*     src={require("../images/banner.jpg")}*/}
+                {/*     alt="" />*/}
 
                 <div className="home__row">
                     {

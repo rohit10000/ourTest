@@ -1,4 +1,4 @@
-export const ADD_USER_ID = 'ADD_USER_ID';
+export const ADD_USER_DETAIL = 'ADD_USER_DETAIL';
 export const USER_LOADING = 'USER_LOADING';
 export const USER_FAILED = 'USER_FAILED';
 export const ADD_USER_TOKEN = 'ADD_USER_TOKEN';

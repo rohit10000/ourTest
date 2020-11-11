@@ -47,7 +47,7 @@ function Signup(props){
         props.postGoogle(response.profileObj);
     }
 
-    if(props.user.authorizedUserId){
+    if(props.user.authorizedUserDetail){
         history.push('/home');
     }
 
@@ -103,8 +103,8 @@ function Signup(props){
                     ):(
                         <Form model={"feedback"} onSubmit={(values) => handleSubmit(values)}>
                             <Row className="form-group">
-                                <Label htmlFor="firstname" md={2}>First Name</Label>
-                                <Col md={10}>
+                                <Label htmlFor="firstname" md={3}>First Name</Label>
+                                <Col md={9}>
                                     <Control.text model=".firstname" id="firstname" name="firstname"
                                                   placeholder="First Name"
                                                   className="form-control"
@@ -127,8 +127,8 @@ function Signup(props){
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="lastname" md={2}>Last Name</Label>
-                                <Col md={10}>
+                                <Label htmlFor="lastname" md={3}>Last Name</Label>
+                                <Col md={9}>
                                     <Control.text model=".lastname" id="lastname" name="lastname"
                                                   placeholder="Last Name"
                                                   className="form-control"
@@ -150,8 +150,8 @@ function Signup(props){
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="email" md={2}>Email</Label>
-                                <Col md={10}>
+                                <Label htmlFor="email" md={3}>Email</Label>
+                                <Col md={9}>
                                     <Control.text model=".email" id="email" name="email"
                                                   placeholder="Email"
                                                   className="form-control"
@@ -172,8 +172,8 @@ function Signup(props){
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="password" md={2}>Password</Label>
-                                <Col md={10}>
+                                <Label htmlFor="password" md={3}>Password</Label>
+                                <Col md={9}>
                                     <Control.password model=".password" id="password" name="password"
                                                       placeholder="Password"
                                                       className="form-control"

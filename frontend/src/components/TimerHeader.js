@@ -71,7 +71,7 @@ function TimerHeader(props){
 
         props.addResultScore(score);
         props.addResultClass(resultClass);
-        props.postLog(props.topic.name, score, numberOfQuestions, props.user.authorizedUserId);
+        props.postLog(props.topic.name, score, numberOfQuestions, props.user.authorizedUserDetail._id);
 
 
         setTimeout(()=>{

@@ -3,23 +3,23 @@ import * as ActionTypes from "./ActionTypes";
 export const User = (state = {
     isLoading: true,
     errMess: [],
-    authorizedUserId: null,
+    authorizedUserDetail: null,
     accessToken:null
     }, action) => {
     switch (action.type){
-        case ActionTypes.ADD_USER_ID:
+        case ActionTypes.ADD_USER_DETAIL:
             return{
                 ...state,
                 isLoading: false,
                 errMess: [],
-                authorizedUserId: action.payload
+                authorizedUserDetail: action.payload
             }
         case ActionTypes.USER_LOADING:
             return {
                 ...state,
                 isLoading: true,
                 errMess: [],
-                authorizedUserId: null,
+                authorizedUserDetail: null,
                 accessToken: null
             }
         case ActionTypes.USER_FAILED:

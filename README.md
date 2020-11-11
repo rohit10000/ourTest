@@ -2,7 +2,9 @@
 
 It is an end to end real-time, responsive test website for 
 hard-working aspiring candidates where they can practice for
-exams of their choice.
+exams of their choice. 
+<a href="http://ourtest.rohitsinghiiitm.com/home">
+Website Link</a>
 
 #### This project consists of 2 parts:
 - Frontend: build in reactJs and bootstrap using javascript, HTML

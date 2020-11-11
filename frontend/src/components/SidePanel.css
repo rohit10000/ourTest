@@ -4,10 +4,24 @@
 .sidePanel__user{
     padding-top: 1vh;
     margin-left: 1vw;
+    display: flex;
+    align-items: center;
+}
+.sidePanel__user__avatar{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+}
+.sidePanel__user__name{
+    margin-left: 1vw;
+    font-weight: lighter;
+    font-size: large;
+    padding-top: 2vh;
 }
 .sidePanel__buttonExplained{
     display: flex;
     justify-content: space-around;
+    padding-right: 5px;
 }
 .sidePanel__buttonExplained__box{
     display: flex;
@@ -32,7 +46,7 @@
 .sidePanel__questionNavigation__buttons{
     display: flex;
     flex-direction: row;
-    height: 40vh;
+    height: 30vh;
     padding: 5px;
     flex-wrap: wrap;
     overflow: auto;
@@ -53,8 +67,8 @@
 .btnCommonAttr{
     margin-right: 0.5rem;
     border: none;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
     color: black;
     margin-left: 1vw;
 }

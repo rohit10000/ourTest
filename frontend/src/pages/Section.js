@@ -61,7 +61,7 @@ class Section extends Component{
             return (
                 <div className="container">
                     <div className="row">
-                        <Loading minHeight={"63vh"}/>
+                        <Loading minHeight={"80vh"}/>
                     </div>
                 </div>
             )

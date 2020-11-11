@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./SidePanel.css";
 import {Loading} from "./Loading";
+import {baseUrl} from "../shared/config";
 
 function RenderSidePanelTitle({topic, topicsLoading, topicsErrMess}){
     if(topicsLoading){
@@ -121,8 +122,14 @@ function SidePanel(props){
                         flag ? (toggleStyles.openSide.sidePanel__user_pTag): (toggleStyles.closeSide.sidePanel__user_pTag)
                     )
                 }>
-                    {"Rohit"}
                 </p>
+                <img className={"sidePanel__user__avatar"} src={
+                    props.user.authorizedUserDetail.googleId ?
+                        (props.user.authorizedUserDetail.imageUrl):
+                        (baseUrl+props.user.authorizedUserDetail.imageUrl)
+                } alt={"avatar"}
+                />
+                <p className={"sidePanel__user__name"}>{props.user.authorizedUserDetail.firstname}</p>
                 {
                     innerWidth < 720 ? (
                         <div className={"toggleBar btn"} onClick={() => toggleFlag()}>
@@ -163,12 +170,6 @@ function SidePanel(props){
                 </div>
             </div>
 
-            <hr style={
-                innerWidth > 720 ? ({color:"black"}): (
-                    flag ? (toggleStyles.openSide.sidePanel__hr):(toggleStyles.closeSide.sidePanel__hr)
-                )
-            }/>
-
             <div className={"sidePanel__questionNavigation"} style={
                 innerWidth > 720 ? ({color:"black"}): (
                     flag ? (toggleStyles.openSide.sidePanel__questionNavigation): (toggleStyles.closeSide.sidePanel__questionNavigation)
@@ -180,7 +181,7 @@ function SidePanel(props){
                                           topicsLoading={props.topicsLoading}
                                           topicsErrMess={props.topicsErrMess}/>
                 </div>
-                <div style={{height:"50vh"}}>
+                <div style={{height:"35vh"}}>
                     <div className={"sidePanel__questionNavigation__buttons"}>
                         {
                             props.quiz.questions.map((question, index)=>{

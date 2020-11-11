@@ -1,6 +1,7 @@
 .logs{
     display: flex;
     flex-direction: column;
+    height: 82vh;
 }
 .logs__header{
     padding-top: 3vh;

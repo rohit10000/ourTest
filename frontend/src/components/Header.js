@@ -1,20 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Header.css";
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import {useHistory} from "react-router-dom";
+import {DropdownMenu, DropdownToggle, Dropdown, DropdownItem} from "reactstrap";
+import {baseUrl} from "../shared/config";
 
 function Header({user, userLoading}){
 
     const history = useHistory();
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggle = () => setDropdownOpen(prevState => !prevState);
+
 
     return (
         <div className={"navbar__container"}>
-            <Navbar className="header fixed-top" expand="lg" variant={"dark"}>
+            <Navbar className="header fixed-top" expand="md" variant={"dark"}>
                 <Navbar.Brand href={"/home"}>
                     <img className="header__logo"
                          src={require("../images/logo.png")}
@@ -40,14 +45,21 @@ function Header({user, userLoading}){
                         <div style={{flex:1}}>
                         </div>
                         {
-                            user.accessToken ? (
+                            user.authorizedUserDetail ? (
                                 <div className={"header__login"}>
-                                    <a style={{color: "white"}} onClick={() => {history.push('/logs')}}>Your Logs</a>
-                                    <a style={{color: "white"}} onClick={() => userLoading()}>Logout</a>
-                                    <ExitToAppIcon style={{color: "white", fontSize:"x-large"}}/>
-
                                     <div className={"header__auth__avatar"}>
 
+                                        <img src={
+                                            user.authorizedUserDetail.googleId ?
+                                                (user.authorizedUserDetail.imageUrl):
+                                                (baseUrl+user.authorizedUserDetail.imageUrl)
+
+                                        }
+                                             className={"header__auth__avatar__image"} alt={"Your Avatar"}/>
+                                        <div className="dropdown-content">
+                                            <a style={{color: "white"}} onClick={() => {history.push('/logs')}}>Your Logs</a>
+                                            <a style={{color: "white"}} onClick={() => userLoading()}>Logout</a>
+                                        </div>
                                     </div>
                                 </div>
                             ):(
