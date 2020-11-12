@@ -37,7 +37,7 @@ class Main extends Component{
         const SectionWithId = ({match}) =>{
             return(
                 <div>
-                    <Header user={this.props.user} />
+                    <Header user={this.props.user} userLoading={this.props.userLoading}/>
                     <Section test={this.props.tests.tests.filter((test) => test._id === match.params.testId)[0]}
                              testsLoading={this.props.tests.isLoading}
                              testsErrMess={this.props.tests.errMess}

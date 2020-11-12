@@ -11,34 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe1b8ac9-a90c-4b63-a01c-d763ea0fc4e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ourTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ourTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/authRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/authRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Card.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/QuestionPanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/QuestionPanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SectionCard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SidePanel.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SidePanel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SidePanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SidePanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimerHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TimerHeader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimerHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TimerHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Logs.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Logs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Logs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Logs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Section.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Section.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/ActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/ActionCreators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/ActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/shared/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/shared/config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +87,7 @@
       <workItem from="1603479497411" duration="467000" />
       <workItem from="1603983177778" duration="8831000" />
       <workItem from="1604333567276" duration="7537000" />
-      <workItem from="1604547867434" duration="17430000" />
+      <workItem from="1604547867434" duration="21306000" />
     </task>
     <servers />
   </component>

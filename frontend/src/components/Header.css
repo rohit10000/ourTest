@@ -58,6 +58,7 @@ span:hover{
     text-decoration: none;
     display: block;
     color: black;
+    cursor: pointer;
 }
 
 .dropdown-content a:hover {
