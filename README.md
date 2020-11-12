@@ -19,6 +19,9 @@ Website Link</a>
 - Every chapter can have multiple questions.
 - User can signup, login and logout.
 - User can even view his dashboard.
+- Admin can add or remove tests, sections, topics, questions.
+- Any user can only login from only one device and can only login
+to other device once it is logged-out from the logged-in device.
 
 <table style="width: 100%">
     <tr>
@@ -29,9 +32,16 @@ Website Link</a>
         <td>User</td>
         <td>
             Can select test category, subsection category and topic,
-            can do quiz, can login, can see to dashboard.
+            can do quiz, can login, can see to dashboard, can only
+            login from one device.
         </td>
     </tr>
+    <tr>
+            <td>Admin</td>
+            <td>
+                Can add or remove tests, sections, topics, questions.
+            </td>
+        </tr>
 </table>
 
 ## Class Diagram
@@ -52,6 +62,34 @@ collection to dB ourTest as is given in the folder
 <a href="/backend/database">/backend/database</a>.
 - Then in the backend folder also, run command <b>npm install</b> and <b>npm start </b> 
 to run the nodeJs server.
+
+- Last thing you need to set the config file n frontend
+and backend. 
+Add config.js file inside
+<a href="/frontend/src/shared">/frontend/src/shared</a>
+with the following content:
+```
+export const baseUrl = <base url>;
+export const clientId = <clent id for google oauth>;
+
+```
+<br>
+Also add a config.js file to 
+<a href="/backend">/backend</a> folder with the 
+following code content:
+
+```
+const user = <user of mongo client>;
+const password = <password>;
+const host = <host ip>;
+const port = <host port>;
+const database = <db>;
+
+module.exports = {
+    'secretKey': <secretKey>,
+    'mongoUrl' : `mongodb://${user}:${password}@${host}:${port}/${database}?authSource=<...>`,
+}
+```
 
 Our basic structure will look like this:
 ![alt text](images/flowDig.jpeg)
