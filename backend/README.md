@@ -12,7 +12,7 @@ and run the command <b>npm install</b>.
 server will start running in <b>localhost:5000</b>.
 - Now create a db named <b>ourTest</b> to mongoDB.
 - Now import collections to ourTest database from 
-<a href="/database">/database</a> folder. You can take help of the 
+<a href="./database">/database</a> folder. You can take help of the 
 following <a href="https://docs.mongodb.com/guides/server/import/">link</a>.
 
 <h4><i>Happy Coding!</i></h4>

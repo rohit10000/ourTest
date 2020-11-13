@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe1b8ac9-a90c-4b63-a01c-d763ea0fc4e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,19 +55,6 @@
       <recent name="$PROJECT_DIR$/frontend" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,7 +68,8 @@
       <workItem from="1603983177778" duration="8831000" />
       <workItem from="1604333567276" duration="7537000" />
       <workItem from="1604547867434" duration="26328000" />
-      <workItem from="1605159376275" duration="2307000" />
+      <workItem from="1605159376275" duration="2661000" />
+      <workItem from="1605197611102" duration="882000" />
     </task>
     <servers />
   </component>
@@ -101,9 +89,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604156117148">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state x="319" y="147" width="374" height="467" key="FileChooserDialogImpl" timestamp="1605197770124">
+      <screen x="0" y="27" width="960" height="693" />
     </state>
+    <state x="319" y="147" width="374" height="467" key="FileChooserDialogImpl/0.27.960.693@0.27.960.693" timestamp="1605197770124" />
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1360.768@72.27.1294.741" timestamp="1602770946044" />
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1604156117148" />
   </component>
