@@ -117,4 +117,4 @@ Screenshots for the project are as follows:
 ![alt text](images/mobile/pic1.png)
 
 ![alt text](images/mobile/pic2.png)
-![alt text][22](images/mobile/pic3.png)
+![alt text](images/mobile/pic3.png)
