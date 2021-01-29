@@ -100,4 +100,21 @@ If you want to see how I deployed my first
 nodeJs app on google cloud. Feel free to
 checkout the <a href="https://rohitsingh-68836.medium.com/deploy-your-first-node-js-and-mongodb-app-on-google-cloud-51c2488aa8d8">link</a>.
 
+Screenshots for the project are as follows:
 
+### Web UI
+
+![alt text](images/web/pic19.png)
+![alt text](images/web/pic20.png)
+![alt text](images/web/pic20_.png)
+![alt text](images/web/pic21.png)
+![alt text](images/web/pic22.png)
+![alt text](images/web/pic23.png)
+![alt text](images/web/pic25.png)
+
+### Mobile UI
+
+![alt text](images/mobile/pic1.png)
+
+![alt text](images/mobile/pic2.png)
+![alt text][22](images/mobile/pic3.png)
