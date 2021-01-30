@@ -104,17 +104,59 @@ Screenshots for the project are as follows:
 
 ### Web UI
 
-![alt text](images/web/pic19.png)
-![alt text](images/web/pic20.png)
-![alt text](images/web/pic20_.png)
-![alt text](images/web/pic21.png)
-![alt text](images/web/pic22.png)
-![alt text](images/web/pic23.png)
-![alt text](images/web/pic25.png)
+<div>
+<img src="images/web/pic19.png" width="40%">
+<img src="images/web/pic20.png" width="40%">
+</div>
+<div>
+<img src="images/web/pic20_.png" width="40%">
+<img src="images/web/pic21.png" width="40%">
+</div>
+<div>
+<img src="images/web/pic22.png" width="40%">
+<img src="images/web/pic23.png" width="40%">
+</div>
+<div>
+<img src="images/web/pic25.png" width="40%">
+
+</div>
+
 
 ### Mobile UI
 
-![alt text](images/mobile/pic1.png)
+<div>
+<img src="images/mobile/pic1.png" width="30%">
+<img src="images/mobile/pic2.png" width="30%">
+<img src="images/mobile/pic3.png" width="30%">
+</div>
 
-![alt text](images/mobile/pic2.png)
-![alt text](images/mobile/pic3.png)
+<div>
+<img src="images/mobile/pic3.png" width="30%">
+<img src="images/mobile/pic4.png" width="30%">
+<img src="images/mobile/pic5.png" width="30%">
+</div>
+
+<div>
+<img src="images/mobile/pic6.png" width="30%">
+<img src="images/mobile/pic7.png" width="30%">
+<img src="images/mobile/pic8.png" width="30%">
+</div>
+
+<div>
+<img src="images/mobile/pic11.png" width="30%">
+<img src="images/mobile/pic12.png" width="30%">
+<img src="images/mobile/pic13.png" width="30%">
+</div>
+
+<div>
+<img src="images/mobile/pic14.png" width="30%">
+<img src="images/mobile/pic15.png" width="30%">
+<img src="images/mobile/pic16.png" width="30%">
+</div>
+<div>
+<img src="images/mobile/pic17.png" width="30%">
+<img src="images/mobile/pic18.png" width="30%">
+</div>
+
+
+Happy Visiting!
