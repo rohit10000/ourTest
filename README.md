@@ -2,9 +2,7 @@
 
 It is an end to end real-time, responsive test website for 
 hard-working aspiring candidates where they can practice for
-exams of their choice. 
-<a href="http://ourtest.rohitsinghiiitm.com">
-Website Link</a>
+exams of their choice.
 
 #### This project consists of 2 parts:
 - Frontend: build in reactJs and bootstrap using javascript, HTML
@@ -100,7 +98,7 @@ If you want to see how I deployed my first
 nodeJs app on google cloud. Feel free to
 checkout the <a href="https://rohitsingh-68836.medium.com/deploy-your-first-node-js-and-mongodb-app-on-google-cloud-51c2488aa8d8">link</a>.
 
-Screenshots for the project are as follows:
+## Screenshots for the project are as follows:
 
 ### Web UI
 
@@ -159,4 +157,4 @@ Screenshots for the project are as follows:
 </div>
 
 
-Happy Visiting!
+<i><b>Happy Visiting!</b></i>
